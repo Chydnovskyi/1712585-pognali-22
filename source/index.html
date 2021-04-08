@@ -11,27 +11,25 @@
 <body>
   <header>
     <img src="img/logo.png" alt="logo">
-    <button class="button--close">
+    <button class="button button--close">
     </button>
+    <div class="menu">
     <h2>
         О сервисе Направления Попутчики
       </h2>
-    <a href="#" class="button--autorization">
+    <a href="#" class="button button--autorization">
         Авторизация
       </a>
-    <div class="promo--contact">
-      <div class="contact-number">
+    <div class="menu__contact">
         <a href="tel:88005558628">8 800 555-86-28</a>
-      </div>
-      <div class="contact-email">
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </div>
     </div>
-    <div class="promo--social">
+    <div class="menu__social">
       <a href="">facebook</a>
       <a href="">vkontakte</a>
       <a href="">instagram</a>
     </div>
+  </div>
   </header>
   <main>
     <section class="promo-mobile">
@@ -57,7 +55,7 @@
         <li>Путешествуйте вместе!</li>
       </ul>
     </section>
-    <section class="about_service">
+    <section class="about-service">
       <h2>О сервисе</h2>
       <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
       <p>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
@@ -65,30 +63,30 @@
     <section class="direction">
       <h2>Направления</h2>
       <p>Мы не продаем туры и ничего не рекламируем.Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-      <ul class="direction--list">
-        <li class="direction--item">
+      <ul class="direction__list">
+        <li class="direction__item">
           <img src="img/mobile/thailand-mobile1.jpg" alt="thailand">
           <h3>Таиланд</h3>
           <p>Джунгли зовут!</p>
-          <div class="direction-people">
+          <div class="direction__people">
             <img src="img/icon-flag/Thailand1.jpg" alt="icon">
             <p>18321</p>
           </div>
         </li>
-        <li class="direction--item">
+        <li class="direction__item">
           <img src="img/mobile/france-mobile1.jpg" alt="france">
           <h3>Франция</h3>
           <p>Трэ бьен, манифик!</p>
-          <div class="direction-people">
+          <div class="direction__people">
             <img src="img/icon-flag/France1.jpg" alt="icon">
             <p>12518</p>
           </div>
         </li>
-        <li class="direction--item">
+        <li class="direction__item">
           <img src="img/mobile/czech-mobile1.jpg" alt="Czech">
           <h3>Чехия</h3>
           <p>Закоулки старой Европы</p>
-          <div class="direction-people">
+          <div class="direction__people">
             <img src="img/icon-flag/Czech2.jpg" alt="icon">
             <p>5326</p>
           </div>
@@ -100,17 +98,17 @@
       <h2>Попутчики</h2>
       <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
       <p>Теперь можно легко найти единомышленников!</p>
-      <ul class="companion-list">
-        <li class="companion-item">
+      <ul class="companion__list">
+        <li class="companion__item">
           <img src="img/tanya.jpg" alt="Photo">
-          <div class="item-flag">
+          <div class="companion__flag">
             <img src="img/icon-flag/Sri-Lanka1.jpg" alt="">
             <img src="img/icon-flag/Thailand1.jpg" alt="">
             <img src="img/icon-flag/Seychelles1.jpg" alt="">
           </div>
           <h3>Таня Фирсова</h3>
           <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <div class="item-icon">
+          <div class="companion__icon">
             <img src="img/icon/icon_plane.png" alt="">
             <img src="img/icon/icon_bus1.png" alt="">
             <img src="img/icon/icon_bicycle.png" alt="">
@@ -119,13 +117,13 @@
         </li>
         <li class="companion-item">
           <img src="img/petya.jpg" alt="Photo">
-          <div class="item-flag">
+          <div class="companion__flag">
             <img src="img/icon-flag/Belgium.jpg" alt="">
             <img src="img/icon-flag/Czech2.jpg" alt="">
           </div>
           <h3>Петя Демин</h3>
           <p>#бургер #бар #футбол #концерт #крафт</p>
-          <div class="item-icon">
+          <div class="companion__icon">
             <img src="img/icon/icon_plane.png" alt="">
             <img src="img/icon/icon_bus.png" alt="">
             <img src="img/icon/icon_bicycle.png" alt="">
@@ -135,11 +133,11 @@
       </ul>
       <a href="catalog.html">Показать всех</a>
     </section>
-    <section class="add_profile">
+    <section class="add-profile">
       <h2>Добавьте свой профиль</h2>
       <img src="img/rates.png" alt="">
-      <ul class="add_profile-list">
-        <li>
+      <ul class="add-profile__list">
+        <li class="add-profile__item">
           <p>Базовое размещение</p>
           <p>1</p>
         </li>
@@ -152,7 +150,7 @@
           <p>3</p>
         </li>
       </ul>
-      <ul class="add_profile-list-price">
+      <ul class="add-profile__list-price">
         <li>
           <p>Бесплатно</p>
         </li>
@@ -171,12 +169,12 @@
         <a href="#">авторизуйтесь</a>.
       </p>
       <form method="GET" action="https://echo.htmlacademy.ru/">
-        <input class="interest-email" type="text" value="E-mail">
+        <input id="interest-email" type="text" value="E-mail">
         <label for="interest-email"></label>
         <button type="submit"></button>
       </form>
       <p>Остались вопросы? Мы с радостью на них ответим!</p>
-      <div class="interest--contact">
+      <div class="interest__contact">
         <div class="contact-number">
           <a href="tel:88005558628">8 800 555-86-28</a>
         </div>
@@ -184,7 +182,7 @@
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
       </div>
-      <div class="interest--map">
+      <div class="interest__map">
         <div class="map-geo">
           <a href="">ул. Большая Конюшенная, 19/8</a>
           <a href="">Проложить маршрут</a>
@@ -193,9 +191,9 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1617738456079!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <h1>Погнали?</h1>
-    <div class="footer--social">
+    <div class="footer__social">
       <a href="">facebook</a>
       <a href="">vkontakte</a>
       <a href="">instagram</a>
