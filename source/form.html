@@ -36,20 +36,31 @@
     <form method="GET" action="https://echo.htmlacademy.ru/">
     <img src="img/mobile/mark_level.png" alt="">
     <img src="img/mobile/demin-form.png" alt="">
-    <button type="button">сменить фото</button>
+    <label>
+      <input type="file" name="photo">
+      сменить фото
+    </label>
     <fieldset>
       <legend>Теги</legend>
-      <textarea name="text" cols="30" rows="10">#бургер #бар #футбол #концерт
+      <textarea name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт
         #крафт</textarea>
-      <input id="tegs" type="submit" >
+      <input id="tegs" type="submit" name="tegs">
       <label for="tegs"></label>
     </fieldset>
     <fieldset>
       <legend>Транспорт</legend>
-      <!-- <img src="img/icon/icon_plane.png" alt="">
-      <img src="img/icon/icon_bus.png" alt="">
-      <img src="img/icon/icon_bicycle.png" alt="">
-      <img src="img/icon/icon_run.png" alt=""> -->
+      <label>
+        <input type="checkbox" name="plane">
+      </label>
+      <label>
+        <input type="checkbox" name="bus">
+      </label>
+      <label>
+        <input type="checkbox" name="bycicle">
+      </label>
+      <label>
+        <input type="checkbox" name="run">
+      </label>
     </fieldset>
     <fieldset class="my-plans">
       <legend>Мои планы:</legend>
@@ -76,10 +87,10 @@
           <p>Укажите предпочтительное количество попутчиков, которых
             вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
-            <input id="popyt1" type="text" value="2">
+            <input id="popyt1" type="text" value="2" name="people">
             <label for="popyt2">длительность: <span>дн.</span></label>
-            <input id="popyt2" type="text" value="3">
-            <input id="checkbox" type="checkbox">
+            <input id="popyt2" type="text" value="3" name="days">
+            <input id="checkbox" type="checkbox" name="children">
             <label for="checkbox">Можно с детьми</label>
             <div class="month">
               <a href="">
@@ -154,13 +165,13 @@
           <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
           <label for="step2-country1">
-            <input id="step2-country1" type="text" value="Босния и герцеговина">
+            <input id="step2-country1" type="text" value="Босния и герцеговина" name="country">
           </label>
           <label for="step2-country2">
-            <input id="step2-country2" type="text" value="Чехия">
+            <input id="step2-country2" type="text" value="Чехия" name="country">
           </label>
           <label for="step2-country3">
-            <input id="step2-country3" type="text" value="Выбрать страну">
+            <input id="step2-country3" type="text" value="Выбрать страну" name="country">
           </label>
           <button type="button">Добавить страну</button>
           <a href="">Следующий шаг</a>
@@ -213,14 +224,14 @@
           <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
           <fieldset>
             <legend>Босния и Герцеговина <img src="/source/img/icon/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
-            <textarea name="text" cols="30" rows="10">План действий</textarea>
-            <input id="plans1" type="submit">
+            <textarea name="plane" cols="30" rows="10">План действий</textarea>
+            <input id="plans1" type="submit" name="plane1">
             <label for="plans1"></label>
           </fieldset>
           <fieldset>
             <legend>Чехия <img src="/source/img/icon/Czech-2.svg" alt=""></legend>
             <textarea name="text" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            <input id="plans2" type="submit">
+            <input id="plans2" type="submit" name="plane2">
             <label for="plans2"></label>
           </fieldset>
 
