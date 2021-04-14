@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 </head>
 <body>
   <header>
-    <img src="img/logo.png" alt="">
+    <a href="./index.html"><img src="img/logo.png" alt=""></a>
     <a href=""><img src="img/mobile/icon_menu_mobile.png" alt=""></a>
     <h2>Направления</h2>
+    <button class="button button--close">
+    </button>
+    <div class="menu">
+    <h2>
+        О сервисе Направления Попутчики
+      </h2>
+    <a href="#" class="button button--autorization">
+        Авторизация
+      </a>
+    <div class="menu__contact">
+        <a href="tel:88005558628">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    </div>
+    <div class="menu__social">
+      <a href="">facebook</a>
+      <a href="">vkontakte</a>
+      <a href="">instagram</a>
+    </div>
+  </div>
   </header>
   <main>
     <form method="GET" action="https://echo.htmlacademy.ru/">
     <img src="img/mobile/mark_level.png" alt="">
     <img src="img/mobile/demin-form.png" alt="">
-    <a href="#">сменить фото</a>
+    <button type="button">сменить фото</button>
     <fieldset>
       <legend>Теги</legend>
-      <input class="tegs" type="text" value="#бургер #бар #футбол #концерт
-      #крафт">
+      <textarea name="text" cols="30" rows="10">#бургер #бар #футбол #концерт
+        #крафт</textarea>
+      <input id="tegs" type="submit" >
       <label for="tegs"></label>
     </fieldset>
     <fieldset>
       <legend>Транспорт</legend>
-      <img src="img/icon/icon_plane.png" alt="">
+      <!-- <img src="img/icon/icon_plane.png" alt="">
       <img src="img/icon/icon_bus.png" alt="">
       <img src="img/icon/icon_bicycle.png" alt="">
-      <img src="img/icon/icon_run.png" alt="">
+      <img src="img/icon/icon_run.png" alt=""> -->
     </fieldset>
     <fieldset class="my-plans">
       <legend>Мои планы:</legend>
@@ -54,11 +75,11 @@
           <h3>Шаг 1. Даты пребывания</h3>
           <p>Укажите предпочтительное количество попутчиков, которых
             вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-            <label for="popyt">ищу попутчиков: <span>чел.</span></label>
-            <input class="popyt" type="text" value="2">
-            <label for="popyt">длительность: <span>дн.</span></label>
-            <input class="popyt" type="text" value="3">
-            <input class="checkbox" type="checkbox">
+            <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
+            <input id="popyt1" type="text" value="2">
+            <label for="popyt2">длительность: <span>дн.</span></label>
+            <input id="popyt2" type="text" value="3">
+            <input id="checkbox" type="checkbox">
             <label for="checkbox">Можно с детьми</label>
             <div class="month">
               <a href="">
@@ -132,15 +153,19 @@
           <h3>Шаг 2. Маршрут</h3>
           <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
-          <label for="step2-country">
-            <input class="step2-country" type="text" value="Босния и герцеговина">
-            <input class="step2-country" type="text" value="Чехия">
-            <input class="step2-country" type="text" value="Выбрать страну">
+          <label for="step2-country1">
+            <input id="step2-country1" type="text" value="Босния и герцеговина">
           </label>
-          <a href="">Добавить страну</a>
+          <label for="step2-country2">
+            <input id="step2-country2" type="text" value="Чехия">
+          </label>
+          <label for="step2-country3">
+            <input id="step2-country3" type="text" value="Выбрать страну">
+          </label>
+          <button type="button">Добавить страну</button>
           <a href="">Следующий шаг</a>
           <a href="">на шаг назад</a>
-          <div class="choice_county">
+          <div class="choice">
             <ul class="alphabet">
               <li>А</li>
               <li>Б</li>
@@ -168,7 +193,7 @@
               <li>Ю</li>
               <li>Я</li>
             </ul>
-            <ul class="choice_county-country">
+            <ul class="choice__country">
               <li>Австралия</li>
               <li>Австрия</li>
               <li>Азербайджан</li>
@@ -188,25 +213,27 @@
           <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
           <fieldset>
             <legend>Босния и Герцеговина <img src="/source/img/icon/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
-            <input class="plans" type="text" value="План действий">
-            <label for="plans"></label>
+            <textarea name="text" cols="30" rows="10">План действий</textarea>
+            <input id="plans1" type="submit">
+            <label for="plans1"></label>
           </fieldset>
           <fieldset>
             <legend>Чехия <img src="/source/img/icon/Czech-2.svg" alt=""></legend>
-            <input class="plans" type="text" value="Пить пиво и лазить
-            по старым замкам, наслаждаться архитектурой и вот это все.">
-            <label for="plans"></label>
+            <textarea name="text" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <input id="plans2" type="submit">
+            <label for="plans2"></label>
           </fieldset>
-          <button type="submit">Отправить</button>
+
           <a href="">На шаг назад</a>
         </li>
       </ul>
     </fieldset>
+    <button type="submit">Отправить</button>
   </form>
   </main>
-  <footer>
-    <h1>Погнали?</h1>
-    <div class="footer--social">
+  <footer class="footer">
+    <a href="./index.html"><img src="../source/img/logo.png" alt=""></a>
+    <div class="footer__social">
       <a href="">facebook</a>
       <a href="">vkontakte</a>
       <a href="">instagram</a>
