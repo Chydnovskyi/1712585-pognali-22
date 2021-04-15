@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <header>
+    <img src="img/logo.png" alt="">
+    <a href=""><img src="img/mobile/icon_menu_mobile.png" alt=""></a>
+    <h2>Попутчики</h2>
+    <div class="menu">
+      <h2>
+          О сервисе Направления Попутчики
+        </h2>
+      <a href="#" class="button button--autorization">
+          Авторизация
+        </a>
+      <div class="menu__contact">
+        <a href="tel:88005558628">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="menu__social">
+        <a href="">facebook</a>
+        <a href="">vkontakte</a>
+        <a href="">instagram</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="filter-country">
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7.17395" width="7.82609" height="2" fill="#192144" />
+        <rect x="7.17383" y="8" width="7.82609" height="2" fill="#192144" />
+        <rect y="4" width="7.82609" height="2" fill="#192144" />
+        <rect x="3.91309" width="1.95652" height="2" fill="#192144" />
+        <rect x="3.91309" y="8" width="1.95652" height="2" fill="#192144" />
+        <rect x="9.13037" y="4" width="1.95652" height="2" fill="#192144" />
+        <rect width="2.6087" height="2" fill="#192144" />
+        <rect y="8" width="2.6087" height="2" fill="#192144" />
+        <rect x="12.3914" y="4" width="2.6087" height="2" fill="#192144" />
+      </svg>
+      <h3>Фильтрация по странам:</h3>
+      <a href="">
+        <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#192144" />
+          <circle cx="8.5" cy="1.5" r="1.5" fill="#192144" />
+          <circle cx="15.5" cy="1.5" r="1.5" fill="#192144" />
+        </svg>
+      </a>
+    </div>
+    <section>
+      <div class="filter-country">
+        <ul>
+          <li>Европа</li>
+          <li>Азия</li>
+          <li>америка</li>
+          <li>острова</li>
+        </ul>
+        <div class="choice">
+          <ul class="alphabet">
+            <li>А</li>
+            <li>Б</li>
+            <li>В</li>
+            <li>Г</li>
+            <li>Д</li>
+            <li>Е</li>
+            <li>З</li>
+            <li>И</li>
+            <li>К</li>
+            <li>Л</li>
+            <li>М</li>
+            <li>Н</li>
+            <li>О</li>
+            <li>П</li>
+            <li>Р</li>
+            <li>С</li>
+            <li>Т</li>
+            <li>У</li>
+            <li>Ф</li>
+            <li>Х</li>
+            <li>Ч</li>
+            <li>Ш</li>
+            <li>Э</li>
+            <li>Ю</li>
+            <li>Я</li>
+          </ul>
+          <ul class="choice__county">
+            <li>Австралия</li>
+            <li>Австрия</li>
+            <li>Азербайджан</li>
+            <li>Албания</li>
+            <li>Алжир</li>
+            <li>Ангола</li>
+            <li>Андорра</li>
+            <li>Антигуа и Барбуда</li>
+            <li>Аргентина</li>
+            <li>Армения</li>
+            <li>Афганистан</li>
+          </ul>
+        </div>
+        <a href="">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.25 1.75L1.75 12.25" stroke="#192144" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1.75 1.75L12.25 12.25" stroke="#192144" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Свернуть</a>
+      </div>
+    </section>
+    <section>
+      <form method="GET" action="https://echo.htmlacademy.ru/">
+        <fieldset>
+          <legend>Подберите идеального попутчика</legend>
+          <a href="">хобби</a>
+          <div class="music">
+            <a href="">музыка</a>
+            <input id="rock" type="checkbox" name="rock" checked>
+            <label for="rock">Тяжелый рок</label>
+            <input id="rap" type="checkbox" name="rap" checked>
+            <label for="rap">Русский рэп</label>
+            <input id="eurodance" type="checkbox" name="eurodance">
+            <label for="eurodance">Евроденс</label>
+          </div>
+          <a href="">еда</a>
+          <div class="transport">
+            <a href="">транспорт</a>
+            <label>
+              <input type="checkbox" name="plane" checked>
+            </label>
+            <label>
+              <input type="checkbox" name="bus" checked>
+            </label>
+            <label>
+              <input type="checkbox" name="bycicle">
+            </label>
+            <label>
+              <input type="checkbox" name="run" checked>
+            </label>
+          </div>
+          <div class="level">
+            <a href="">Левел</a>
+            <label>
+              <input type="text" value="30" name="level">
+            </label>
+            <label>
+              <input type="text" value="100" name="level">
+            </label>
+            <div class="filter-price-range">
+              <label class="">
+                <input class="" type="range" name="price" id="filter-price"> Прайс фильтер
+              </label>
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <a class="toggle toggle-min" href="#" aria-label="Меньше"></a>
+              <a class="toggle toggle-max" href="#" aria-label="Больше"></a>
+            </div>
+          </div>
+          <button type="submit">показать</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="anket">
+      <ul>
+        <li>
+          <a href=""><img src="./img/mobile/tanya.png" alt="photo"></a>
+          <a href="">like
+          </a>
+          <a href=""><h3>Таня Фирсова</h3></a>
+          <p>1,5 М</p>
+          <div class="circle"></div>
+          <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <div class="want-country">
+            <p>хочет посетить:</p>
+            <ul>
+              <li>шри-ланка</li>
+              <li>Таиланд</li>
+              <li>сейшелы</li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p>транспорт:</p>
+            <img src="./img/icon/plane.svg" alt="">
+            <img src="./img/icon/bus.svg" alt="">
+            <img src="./img/icon/bicycle.svg" alt="">
+            <img src="./img/icon/run.svg" alt="">
+          </div>
+          <div class="level">
+            <img src="./img/icon/level_99.svg" alt="">
+          </div>
+          <a href="">ПОзвать!</a>
+        </li>
+        <li>
+          <a href=""><img src="./img/mobile/petya.png" alt="photo"></a>
+          <a href="">
+            like
+          </a>
+          <a href=""><h3>Петя Демин</h3></a>
+          <p>1500</p>
+          <div class="circle"></div>
+          <p>#бургер #бар #футбол #концерт #крафт</p>
+          <div class="want-country">
+            <p>хочет посетить:</p>
+            <ul>
+              <li>бельгия</li>
+              <li>чехия</li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p>транспорт:</p>
+            <img src="./img/icon/plane.svg" alt="">
+            <img src="./img/icon/bus.svg" alt="">
+            <img src="./img/icon/bicycle.svg" alt="">
+            <img src="./img/icon/run.svg" alt="">
+          </div>
+          <div class="level">
+            <img src="./img/icon/level_80.svg" alt="">
+          </div>
+          <a href="">ПОзвать!</a>
+        </li>
+        <li>
+          <a href=""><img src="./img/mobile/petya.png" alt="photo"></a>
+          <a href="">
+            like
+          </a>
+          <a href=""><h3>Марк Смолов</h3></a>
+          <p>170</p>
+          <div class="circle"></div>
+          <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <div class="want-country">
+            <p>хочет посетить:</p>
+            <ul>
+              <li>сша</li>
+              <li>австралия</li>
+              <li>доминика</li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p>транспорт:</p>
+            <img src="./img/icon/plane.svg" alt="">
+            <img src="./img/icon/bus.svg" alt="">
+            <img src="./img/icon/bicycle.svg" alt="">
+            <img src="./img/icon/run.svg" alt="">
+          </div>
+          <div class="level">
+            <img src="./img/icon/level_25.svg" alt="">
+          </div>
+          <a href="">ПОзвать!</a>
+        </li>
+        <li>
+          <a href=""><img src="./img/mobile/larisa.png" alt="photo"></a>
+          <a href="">
+            like
+          </a>
+          <a href=""><h3>Лариса Роговая</h3></a>
+          <p>23</p>
+          <div class="circle"></div>
+          <p>#образование #карьера #учеба #линкедин</p>
+          <div class="want-country">
+            <p>хочет посетить:</p>
+            <ul>
+              <li>Великобритания</li>
+              <li>Германия</li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p>транспорт:</p>
+            <img src="./img/icon/plane.svg" alt="">
+            <img src="./img/icon/bus.svg" alt="">
+            <img src="./img/icon/bicycle.svg" alt="">
+            <img src="./img/icon/run.svg" alt="">
+          </div>
+          <div class="level">
+            <img src="./img/icon/level_50.svg" alt="">
+          </div>
+          <a href="">ПОзвать!</a>
+        </li>
+      </ul>
+      <a href="#">показать еще</a>
+    </section>
+
+    <section>
+      <a href="">left</a>
+      <a href="">right</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <h1>Погнали?</h1>
+    <div class="footer__social">
+      <a href="">facebook</a>
+      <a href="">vkontakte</a>
+      <a href="">instagram</a>
+    </div>
+    <h2>Разработано</h2>
+    <a href="https://up.htmlacademy.ru/adaptive/22">HTML Academy</a>
+  </footer>
+</body>
+
+</html>

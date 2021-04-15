@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 </head>
+
 <body>
   <header>
     <a href="./index.html"><img src="img/logo.png" alt=""></a>
@@ -15,82 +16,91 @@
     <button class="button button--close">
     </button>
     <div class="menu">
-    <h2>
+      <h2>
         О сервисе Направления Попутчики
       </h2>
-    <a href="#" class="button button--autorization">
+      <a href="#" class="button button--autorization">
         Авторизация
       </a>
-    <div class="menu__contact">
+      <div class="menu__contact">
         <a href="tel:88005558628">8 800 555-86-28</a>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="menu__social">
+        <a href="">facebook</a>
+        <a href="">vkontakte</a>
+        <a href="">instagram</a>
+      </div>
     </div>
-    <div class="menu__social">
-      <a href="">facebook</a>
-      <a href="">vkontakte</a>
-      <a href="">instagram</a>
-    </div>
-  </div>
   </header>
   <main>
     <form method="GET" action="https://echo.htmlacademy.ru/">
-    <img src="img/mobile/mark_level.png" alt="">
-    <img src="img/mobile/demin-form.png" alt="">
-    <button type="button">сменить фото</button>
-    <fieldset>
-      <legend>Теги</legend>
-      <textarea name="text" cols="30" rows="10">#бургер #бар #футбол #концерт
-        #крафт</textarea>
-      <input id="tegs" type="submit" >
-      <label for="tegs"></label>
-    </fieldset>
-    <fieldset>
-      <legend>Транспорт</legend>
-      <!-- <img src="img/icon/icon_plane.png" alt="">
-      <img src="img/icon/icon_bus.png" alt="">
-      <img src="img/icon/icon_bicycle.png" alt="">
-      <img src="img/icon/icon_run.png" alt=""> -->
-    </fieldset>
-    <fieldset class="my-plans">
-      <legend>Мои планы:</legend>
-      <ul>
-        <li>
-          <h3>1. Франция, Италия</h3>
-          <p>3 попутчика</p>
-          <p>26 мар — 29 мар</p>
-          <a href="#">изменить</a>
-        </li>
-        <li>
-          <h3>2. Таиланд, Индонезия</h3>
-          <p>1 попутчик</p>
-          <p>1 июл — 15 июл</p>
-          <a href="#">изменить</a>
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset>
-      <legend>Добавить план:</legend>
-      <ul>
-        <li>
-          <h3>Шаг 1. Даты пребывания</h3>
-          <p>Укажите предпочтительное количество попутчиков, которых
-            вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+      <img src="img/mobile/mark_level.png" alt="">
+      <img src="img/mobile/demin-form.png" alt="">
+      <label>
+        <input type="file" name="photo"> сменить фото
+      </label>
+      <fieldset>
+        <legend>Теги</legend>
+        <textarea name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт
+        </textarea>
+        <input id="tegs" type="submit" name="tegs">
+        <label for="tegs"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Транспорт</legend>
+        <label>
+          <input type="checkbox" name="plane">
+        </label>
+        <label>
+          <input type="checkbox" name="bus">
+        </label>
+        <label>
+          <input type="checkbox" name="bycicle">
+        </label>
+        <label>
+          <input type="checkbox" name="run">
+        </label>
+      </fieldset>
+      <fieldset class="my-plans">
+        <legend>Мои планы:</legend>
+        <ul>
+          <li>
+            <h3>1. Франция, Италия</h3>
+            <p>3 попутчика</p>
+            <p>26 мар — 29 мар</p>
+            <a href="#">изменить</a>
+          </li>
+          <li>
+            <h3>2. Таиланд, Индонезия</h3>
+            <p>1 попутчик</p>
+            <p>1 июл — 15 июл</p>
+            <a href="#">изменить</a>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Добавить план:</legend>
+        <ul>
+          <li>
+            <h3>Шаг 1. Даты пребывания</h3>
+            <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
             <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
-            <input id="popyt1" type="text" value="2">
+            <input id="popyt1" type="text" value="2" name="people">
             <label for="popyt2">длительность: <span>дн.</span></label>
-            <input id="popyt2" type="text" value="3">
-            <input id="checkbox" type="checkbox">
+            <input id="popyt2" type="text" value="3" name="days">
+            <input id="checkbox" type="checkbox" name="children">
             <label for="checkbox">Можно с детьми</label>
             <div class="month">
               <a href="">
                 <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.8116 0.400608C8.71296 0.288944 8.59577 0.200351 8.46676 0.139903C8.33775 0.0794548 8.19945 0.0483398 8.05977 0.0483398C7.92009 0.0483398 7.78179 0.0794548 7.65278 0.139903C7.52377 0.200351 7.40659 0.288944 7.30795 0.400608L0.248437 8.37194C0.169684 8.46069 0.107204 8.5661 0.0645734 8.68214C0.0219433 8.79818 0 8.92258 0 9.04821C0 9.17384 0.0219433 9.29824 0.0645734 9.41428C0.107204 9.53033 0.169684 9.63574 0.248437 9.72448L7.30795 17.6958C7.72421 18.1658 8.39533 18.1658 8.8116 17.6958C9.22786 17.2258 8.88303 16.7322 8.46676 16.2622L4.74854 12.0836L2.12914 9.01725L8.8207 1.30298C8.8207 1.30298 9.22786 0.861046 8.8116 0.400608Z" fill="black"/>
+                  <path d="M8.8116 0.400608C8.71296 0.288944 8.59577 0.200351 8.46676 0.139903C8.33775 0.0794548 8.19945 0.0483398 8.05977 0.0483398C7.92009 0.0483398 7.78179 0.0794548 7.65278 0.139903C7.52377 0.200351 7.40659 0.288944 7.30795 0.400608L0.248437 8.37194C0.169684 8.46069 0.107204 8.5661 0.0645734 8.68214C0.0219433 8.79818 0 8.92258 0 9.04821C0 9.17384 0.0219433 9.29824 0.0645734 9.41428C0.107204 9.53033 0.169684 9.63574 0.248437 9.72448L7.30795 17.6958C7.72421 18.1658 8.39533 18.1658 8.8116 17.6958C9.22786 17.2258 8.88303 16.7322 8.46676 16.2622L4.74854 12.0836L2.12914 9.01725L8.8207 1.30298C8.8207 1.30298 9.22786 0.861046 8.8116 0.400608Z" fill="black" />
                 </svg>
               </a>
               <h3>Март 2019</h3>
               <a href="">
                 <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.06949 18.3693C1.16815 18.481 1.28536 18.5695 1.41439 18.63C1.54343 18.6904 1.68176 18.7216 1.82146 18.7216C1.96117 18.7216 2.0995 18.6904 2.22853 18.63C2.35757 18.5695 2.47477 18.481 2.57344 18.3693L9.63433 10.398C9.7131 10.3092 9.77559 10.2038 9.81823 10.0878C9.86086 9.97171 9.88281 9.84732 9.88281 9.72169C9.88281 9.59605 9.86086 9.47166 9.81823 9.35561C9.77559 9.23957 9.7131 9.13416 9.63433 9.04542L2.57344 1.07408C2.15709 0.60405 1.48584 0.60405 1.06949 1.07408C0.653145 1.54411 1.32374 2.3591 1.74009 2.82913L7.82453 9.72169L1.41439 16.972C1.00654 17.4324 0.653145 17.9089 1.06949 18.3693Z" fill="black"/>
+                  <path d="M1.06949 18.3693C1.16815 18.481 1.28536 18.5695 1.41439 18.63C1.54343 18.6904 1.68176 18.7216 1.82146 18.7216C1.96117 18.7216 2.0995 18.6904 2.22853 18.63C2.35757 18.5695 2.47477 18.481 2.57344 18.3693L9.63433 10.398C9.7131 10.3092 9.77559 10.2038 9.81823 10.0878C9.86086 9.97171 9.88281 9.84732 9.88281 9.72169C9.88281 9.59605 9.86086 9.47166 9.81823 9.35561C9.77559 9.23957 9.7131 9.13416 9.63433 9.04542L2.57344 1.07408C2.15709 0.60405 1.48584 0.60405 1.06949 1.07408C0.653145 1.54411 1.32374 2.3591 1.74009 2.82913L7.82453 9.72169L1.41439 16.972C1.00654 17.4324 0.653145 17.9089 1.06949 18.3693Z" fill="black" />
                 </svg>
               </a>
             </div>
@@ -148,88 +158,88 @@
               <li>5</li>
             </ul>
             <a href="#">Следующий шаг</a>
-        </li>
-        <li>
-          <h3>Шаг 2. Маршрут</h3>
-          <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+          </li>
+          <li>
+            <h3>Шаг 2. Маршрут</h3>
+            <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
 
-          <label for="step2-country1">
-            <input id="step2-country1" type="text" value="Босния и герцеговина">
-          </label>
-          <label for="step2-country2">
-            <input id="step2-country2" type="text" value="Чехия">
-          </label>
-          <label for="step2-country3">
-            <input id="step2-country3" type="text" value="Выбрать страну">
-          </label>
-          <button type="button">Добавить страну</button>
-          <a href="">Следующий шаг</a>
-          <a href="">на шаг назад</a>
-          <div class="choice">
-            <ul class="alphabet">
-              <li>А</li>
-              <li>Б</li>
-              <li>В</li>
-              <li>Г</li>
-              <li>Д</li>
-              <li>Е</li>
-              <li>З</li>
-              <li>И</li>
-              <li>К</li>
-              <li>Л</li>
-              <li>М</li>
-              <li>Н</li>
-              <li>О</li>
-              <li>П</li>
-              <li>Р</li>
-              <li>С</li>
-              <li>Т</li>
-              <li>У</li>
-              <li>Ф</li>
-              <li>Х</li>
-              <li>Ч</li>
-              <li>Ш</li>
-              <li>Э</li>
-              <li>Ю</li>
-              <li>Я</li>
-            </ul>
-            <ul class="choice__country">
-              <li>Австралия</li>
-              <li>Австрия</li>
-              <li>Азербайджан</li>
-              <li>Албания</li>
-              <li>Алжир</li>
-              <li>Ангола</li>
-              <li>Андорра</li>
-              <li>Антигуа и Барбуда</li>
-              <li>Аргентина</li>
-              <li>Армения</li>
-              <li>Афганистан</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <h3>Шаг 3. Развлечения</h3>
-          <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-          <fieldset>
-            <legend>Босния и Герцеговина <img src="/source/img/icon/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
-            <textarea name="text" cols="30" rows="10">План действий</textarea>
-            <input id="plans1" type="submit">
-            <label for="plans1"></label>
-          </fieldset>
-          <fieldset>
-            <legend>Чехия <img src="/source/img/icon/Czech-2.svg" alt=""></legend>
-            <textarea name="text" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            <input id="plans2" type="submit">
-            <label for="plans2"></label>
-          </fieldset>
+            <label for="step2-country1">
+              <input id="step2-country1" type="text" value="Босния и герцеговина" name="country">
+            </label>
+            <label for="step2-country2">
+              <input id="step2-country2" type="text" value="Чехия" name="country">
+            </label>
+            <label for="step2-country3">
+              <input id="step2-country3" type="text" value="Выбрать страну" name="country">
+            </label>
+            <button type="button">Добавить страну</button>
+            <a href="">Следующий шаг</a>
+            <a href="">на шаг назад</a>
+            <div class="choice">
+              <ul class="alphabet">
+                <li>А</li>
+                <li>Б</li>
+                <li>В</li>
+                <li>Г</li>
+                <li>Д</li>
+                <li>Е</li>
+                <li>З</li>
+                <li>И</li>
+                <li>К</li>
+                <li>Л</li>
+                <li>М</li>
+                <li>Н</li>
+                <li>О</li>
+                <li>П</li>
+                <li>Р</li>
+                <li>С</li>
+                <li>Т</li>
+                <li>У</li>
+                <li>Ф</li>
+                <li>Х</li>
+                <li>Ч</li>
+                <li>Ш</li>
+                <li>Э</li>
+                <li>Ю</li>
+                <li>Я</li>
+              </ul>
+              <ul class="choice__country">
+                <li>Австралия</li>
+                <li>Австрия</li>
+                <li>Азербайджан</li>
+                <li>Албания</li>
+                <li>Алжир</li>
+                <li>Ангола</li>
+                <li>Андорра</li>
+                <li>Антигуа и Барбуда</li>
+                <li>Аргентина</li>
+                <li>Армения</li>
+                <li>Афганистан</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3>Шаг 3. Развлечения</h3>
+            <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <fieldset>
+              <legend>Босния и Герцеговина <img src="/source/img/icon/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
+              <textarea name="plane" cols="30" rows="10">План действий</textarea>
+              <input id="plans1" type="submit" name="plane1">
+              <label for="plans1"></label>
+            </fieldset>
+            <fieldset>
+              <legend>Чехия <img src="/source/img/icon/Czech-2.svg" alt=""></legend>
+              <textarea name="text" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <input id="plans2" type="submit" name="plane2">
+              <label for="plans2"></label>
+            </fieldset>
 
-          <a href="">На шаг назад</a>
-        </li>
-      </ul>
-    </fieldset>
-    <button type="submit">Отправить</button>
-  </form>
+            <a href="">На шаг назад</a>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Отправить</button>
+    </form>
   </main>
   <footer class="footer">
     <a href="./index.html"><img src="../source/img/logo.png" alt=""></a>
@@ -242,4 +252,5 @@
     <a href="https://up.htmlacademy.ru/adaptive/22">HTML Academy</a>
   </footer>
 </body>
+
 </html>
