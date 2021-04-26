@@ -1,5 +1,11 @@
 .direction {
   background: #edeff6;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
 }
 
 .direction h2 {
@@ -14,6 +20,10 @@
   font-size: 16px;
   line-height: 22px;
   color: #444444;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+  }
 }
 
 .direction a {
@@ -22,14 +32,33 @@
   line-height: 18px;
   text-decoration: none;
   color: #1d2e5b;
+  background: #ffd74b;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2;
+  }
 }
 
 .direction__list {
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
 }
 
 .direction__item {
+  width: 270px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    flex-direction: row-reverse;
+  }
 }
 
 .direction__item h3 {
@@ -43,4 +72,9 @@
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+}
+
+.direction__item img:nth-child(2) {
+  width: 35px;
+  height: 24px;
 }

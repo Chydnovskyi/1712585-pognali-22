@@ -1,5 +1,14 @@
 .add-profile {
   background: #e6e8f1;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.add-profile img {
+  position: absolute;
 }
 
 .add-profile a {
@@ -15,6 +24,11 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .add-profile__list {

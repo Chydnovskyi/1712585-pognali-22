@@ -1,5 +1,10 @@
 .companion {
   background: #192144 url("../img/smolov-back-desktop.png") no-repeat;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .companion a {
@@ -9,6 +14,10 @@
   color: #1d2e5b;
   text-decoration: none;
   background: #ffd74b;
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 3;
+  }
 }
 
 .companion__background {
@@ -22,6 +31,12 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+}
+
+.companion__paragraf {
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+  }
 }
 
 .companion__paragraf p:first-child {
@@ -40,10 +55,29 @@
 
 .companion__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
 .companion__item {
   background: white;
+  width: 270px;
+  height: 428px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 483px;
+  }
 }
 
 .companion__item h3 {

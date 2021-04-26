@@ -1,4 +1,18 @@
 .header {
   background-color: #161c35;
   color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.header__logo {
+  display: flex;
+  height: 15px;
+  padding-top: 19px;
+}
+
+.header__menu {
+  margin-left: auto;
 }

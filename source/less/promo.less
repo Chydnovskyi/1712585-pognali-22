@@ -2,14 +2,23 @@
 @white: #FFFFFF;
 
 .promo {
-  background: @standard url("../img/globe-back-mobile.png");
+  background: @standard url("../img/globe-back-mobile.png") no-repeat;
 }
 
 .promo h2 {
+  width: 238px;
+  height: 118px;
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
   color: @white;
+  margin: 0;
+  padding: 60px 16px 245px 16px;
+  text-align: center;
+}
+
+.promo__button {
+  display: flex;
 }
 
 .promo a {
@@ -21,7 +30,35 @@
   text-transform: uppercase;
 }
 
+.promo__phone {
+  width: 18px;
+  height: 18px;
+  padding: 11px;
+  background: #ff8d30;
+  border-radius: 50%;
+}
+
+.promo__email {
+  width: 18px;
+  height: 18px;
+  padding: 11px;
+  background: #ff8d30;
+  border-radius: 50%;
+}
+
+.promo__authorization {
+  width: 190px;
+  height: 18px;
+  padding: 11px;
+  background: #ffd74b;
+  border-radius: 25px;
+  text-align: center;
+}
+
 .promo-best {
+  width: 151px;
+  height: 44px;
+  margin: 28px 0 18px 25px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -29,6 +66,9 @@
 }
 
 .promo-coment {
+  width: 161px;
+  height: 66px;
+  margin: 0 0 29px 25px;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -36,10 +76,34 @@
 }
 
 .promo-list {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.promo-list li {
+  width: 270px;
+  height: 80px;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+  }
 }
 
 .promo-list li:first-child {

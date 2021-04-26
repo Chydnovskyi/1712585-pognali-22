@@ -20,6 +20,15 @@
   color: #ffd74b;
 }
 
+.interest__contact {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .interest__contact a {
   font-weight: 700;
   text-decoration: none;
@@ -35,6 +44,15 @@
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
+}
+
+.map-geo {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .map-geo a:nth-child(2) {
