@@ -1,9 +1,17 @@
 .menu {
   background-color: white;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .menu__list {
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .menu__item a {
@@ -21,6 +29,12 @@
   color: #161c35;
   text-transform: uppercase;
   text-decoration: none;
+  order: 1;
+}
+
+.menu__contact {
+  display: flex;
+  flex-direction: column;
 }
 
 .menu__contact a {
@@ -33,4 +47,15 @@
 
 .menu__social a {
   text-decoration: none;
+}
+
+.menu__social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: left;
+  }
 }

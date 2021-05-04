@@ -1,5 +1,6 @@
 .interest {
   background: #192144;
+  text-align: center;
 }
 
 .interest h2 {
@@ -20,6 +21,16 @@
   color: #ffd74b;
 }
 
+.interest__contact {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .interest__contact a {
   font-weight: 700;
   text-decoration: none;
@@ -27,6 +38,7 @@
 
 .interest__map {
   background: #ffd74b;
+  text-align: left;
 }
 
 .interest__map a {
@@ -35,6 +47,15 @@
   font-size: 16px;
   line-height: 22px;
   text-decoration: none;
+}
+
+.map-geo {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .map-geo a:nth-child(2) {

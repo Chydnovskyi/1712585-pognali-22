@@ -1,5 +1,15 @@
 body {
+  margin: 0;
   font-family: "BloggerSans", sans-serif;
+  min-height: 320px;
+}
+
+.container {
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
 }
 
 .catalog {

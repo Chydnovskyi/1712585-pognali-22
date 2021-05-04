@@ -1,5 +1,14 @@
 .add-profile {
   background: #e6e8f1;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.add-profile img {
+  position: absolute;
 }
 
 .add-profile a {
@@ -15,6 +24,11 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .add-profile__list {
@@ -26,16 +40,8 @@
   font-size: 16px;
   line-height: 16px;
   color: #444444;
-}
 
-.add-profile__item p:nth-child(2) {
-  color: white;
-}
-
-.add-profile__list-price {
-  list-style: none;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 16px;
-  color: #444444;
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
