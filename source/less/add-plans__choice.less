@@ -1,14 +1,29 @@
+.add-plans__choice {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
 .alphabet {
   list-style: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   color: #1d2e5b;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .alphabet li {
   border: 1px solid #cbced9;
   background: white;
+  width: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .alphabet li:first-child {

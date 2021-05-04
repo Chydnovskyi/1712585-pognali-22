@@ -85,18 +85,18 @@
     <form class="form" method="GET" action="https://echo.htmlacademy.ru/">
       <div class="form__anket">
         <img src="img/mobile/mark_level.png" alt="">
-        <img src="img/mobile/demin-form.png" alt="">
+        <img src="img/mobile/petya.png" alt="">
         <label class="form__change-photo">
           <input type="file" name="photo"> сменить фото
         </label>
-        <fieldset class="form__checkbox fieldset-tags">
+        <fieldset class="form__checkbox form__checkbox--tags">
           <legend>Тэги</legend>
           <textarea class="fieldset__tags-textarea" name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт
           </textarea>
           <input id="tegs" type="submit" name="tegs">
           <label for="tegs"></label>
         </fieldset>
-        <fieldset class="form__checkbox fieldset-transport">
+        <fieldset class="form__checkbox form__checkbox--transport">
           <legend>Транспорт</legend>
           <label>
             <input type="checkbox" name="plane">
@@ -135,12 +135,20 @@
           <li class="add-plans__item">
             <h3>Шаг 1. Даты пребывания</h3>
             <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-            <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
-            <input id="popyt1" type="text" value="2" name="people">
-            <label for="popyt2">длительность: <span>дн.</span></label>
-            <input id="popyt2" type="text" value="3" name="days">
-            <input id="checkbox" type="checkbox" name="children">
-            <label class="chieldren" for="checkbox">Можно с детьми</label>
+            <div class="popyt">
+              <div class="popyt__search">
+                <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
+                <input id="popyt1" type="text" value="2" name="people">
+              </div>
+              <div class="popyt__days">
+                <label for="popyt2">длительность: <span>дн.</span></label>
+                <input id="popyt2" type="text" value="3" name="days">
+              </div>
+              <div class="popyt__chieldren">
+                <input id="checkbox" type="checkbox" name="children">
+                <label class="chieldren" for="checkbox">Можно с детьми</label>
+              </div>
+            </div>
             <div class="month">
               <a href="">
                 <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,11 +280,11 @@
             <h3>Шаг 3. Развлечения</h3>
             <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <fieldset class="add-plans__fieldset">
-              <legend>Босния и Герцеговина <img src="/source/img/icon/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
+              <legend>Босния и Герцеговина <img src="/source/img/icon/country/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
               <textarea name="plane" cols="30" rows="10">План действий</textarea>
             </fieldset>
             <fieldset class="add-plans__fieldset">
-              <legend>Чехия <img src="/source/img/icon/Czech-2.svg" alt=""></legend>
+              <legend>Чехия <img src="/source/img/icon/country/Czech.svg" alt=""></legend>
               <textarea name="plane" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </fieldset>
             <a href="">На шаг назад</a>
