@@ -1,9 +1,13 @@
 .footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -12,8 +16,15 @@
 }
 
 .footer p {
+  width: 50%;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: #444444;
 }
+
+.footer__developed {
+  display: flex;
+}
+
+
