@@ -169,6 +169,9 @@
   line-height: 18px;
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid #cbced9;
+  border-width: 1px 0 0 1px;
+  padding: 0;
 }
 
 .add-plans__days li {
@@ -176,6 +179,7 @@
   box-sizing: border-box;
   width: 14%;
   text-align: center;
+  border-width: 0 1px 1px 0;
 
   @media (min-width: @desktop-width) {
     text-align: left;
@@ -202,4 +206,13 @@
   font-weight: 500;
   color: #1d2e5b;
   background: #edeff6;
+}
+
+.add-plans--step {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
