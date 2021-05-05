@@ -10,6 +10,11 @@
   background: white;
 }
 
+.add-plans__item:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
 .add-plans__item h3 {
   font-weight: 700;
   font-size: 20px;
@@ -53,6 +58,10 @@
   text-transform: uppercase;
 }
 
+.add-plans__fieldset {
+  border: none;
+}
+
 .add-plans__fieldset legend {
   font-weight: 500;
   font-size: 18px;
@@ -84,7 +93,52 @@
   text-transform: uppercase;
 }
 
+.popyt {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.popyt__search {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.popyt__days {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.popyt__chieldren {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
 // calendar
+
+.month {
+  display: flex;
+  align-items: center;
+}
 
 .add-plans__weekdays {
   list-style: none;
@@ -92,6 +146,16 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  display: flex;
+}
+
+.add-plans__weekdays li {
+  width: 14%;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .weekdays-red {
@@ -103,11 +167,23 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #cbced9;
+  border-width: 1px 0 0 1px;
+  padding: 0;
 }
 
 .add-plans__days li {
   border: 1px solid #cbced9;
   box-sizing: border-box;
+  width: 14%;
+  text-align: center;
+  border-width: 0 1px 1px 0;
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 
@@ -130,4 +206,13 @@
   font-weight: 500;
   color: #1d2e5b;
   background: #edeff6;
+}
+
+.add-plans--step {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
