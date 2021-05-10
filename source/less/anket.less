@@ -4,10 +4,33 @@
 
 .anket__item {
   background: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .anket__item a {
   text-decoration: none;
+}
+
+.anket__img {
+  grid-column-start: 1;
+  grid-row: ~"1 / 3";
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"1 / 3";
+    grid-row: ~"1 / 4";
+  }
 }
 
 .anket__name h3 {
@@ -17,10 +40,29 @@
   color: #1d2e5b;
 }
 
+.anket__name {
+  grid-column: ~"2 / 4";
+  grid-row-start: 1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"3 / 5";
+    grid-row-start: 1;
+  }
+}
+
 .anket__item p {
   font-size: 15px;
   line-height: 16px;
   color: #444444;
+}
+
+.anket__item p:nth-child(3) {
+  grid-column-start: 2;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 4;
+    grid-row-start: 3;
+  }
 }
 
 .anket__item p:nth-child(4) {
@@ -34,6 +76,33 @@
   line-height: 18px;
 }
 
+.hashtag {
+  grid-column: ~"1 / 4";
+
+  @media (min-width: @tablet-width) {
+    grid-column: ~"3 / 5";
+    grid-row-start: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+  }
+}
+
+.want-country {
+  grid-column: ~"1 / 4";
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    grid-column: ~"1 / 7";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 5;
+    grid-row: ~"1 / 3";
+    flex-direction: column;
+  }
+}
 
 .want-country ul {
   list-style: none;
@@ -42,6 +111,14 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .call {
@@ -51,6 +128,12 @@
   text-transform: uppercase;
   color: #161c35;
   background: #ffd74b;
+  grid-column: ~"1 / 4";
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 3;
+    grid-row-start: 3;
+  }
 }
 
 .show-more {
@@ -60,4 +143,36 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #1d2e5b;
+}
+
+.anket__transport {
+  grid-column: ~"1 / 3";
+
+  @media (min-width: @tablet-width) {
+    grid-column: 5;
+    grid-row: ~"1 /3";
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    flex-direction: row;
+  }
+}
+
+.anket__transport img {
+  width: 23px;
+  height: 22px;
+}
+
+.anket__level {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 5;
+    grid-row-start: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 6;
+  }
 }

@@ -29,7 +29,6 @@
       </svg>
     </a>
     <a class="header__menu" href=""><img src="img/mobile/icon_menu_mobile.png" alt=""></a>
-    <h2>Попутчики</h2>
     <div class="menu">
       <button class="button button--close"></button>
       <nav class="menu__nav">
@@ -81,6 +80,9 @@
     </div>
   </header>
   <main class="main catalog">
+    <div class="main__promo">
+      <h2>Попутчики</h2>
+    </div>
     <div class="filter-country">
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="7.17395" width="7.82609" height="2" fill="#192144" />
@@ -165,37 +167,47 @@
           <a href="">хобби</a>
           <div class="music">
             <a href="">музыка</a>
-            <input id="rock" type="checkbox" name="rock" checked>
-            <label for="rock">Тяжелый рок</label>
-            <input id="rap" type="checkbox" name="rap" checked>
-            <label for="rap">Русский рэп</label>
-            <input id="eurodance" type="checkbox" name="eurodance">
-            <label for="eurodance">Евроденс</label>
+            <label for="rock">
+              <input id="rock" type="checkbox" name="rock" checked>
+              Тяжелый рок
+            </label>
+            <label for="rap">
+              <input id="rap" type="checkbox" name="rap" checked>
+              Русский рэп
+            </label>
+            <label for="eurodance">
+              <input id="eurodance" type="checkbox" name="eurodance">
+              Евроденс
+            </label>
           </div>
           <a href="">еда</a>
           <div class="transport">
             <a href="">транспорт</a>
-            <label>
-              <input type="checkbox" name="plane" checked>
-            </label>
-            <label>
-              <input type="checkbox" name="bus" checked>
-            </label>
-            <label>
-              <input type="checkbox" name="bycicle">
-            </label>
-            <label>
-              <input type="checkbox" name="run" checked>
-            </label>
+            <div class="transport--wrapper">
+              <label>
+                <input type="checkbox" name="plane" checked>
+              </label>
+              <label>
+                <input type="checkbox" name="bus" checked>
+              </label>
+              <label>
+                <input type="checkbox" name="bycicle">
+              </label>
+              <label>
+                <input type="checkbox" name="run" checked>
+              </label>
+            </div>
           </div>
           <div class="level">
             <a href="">Левел</a>
-            <label>
-              <input class="level__input" type="text" value="30" name="level">
-            </label>
-            <label>
-              <input class="level__input" type="text" value="100" name="level">
-            </label>
+            <div class="level__wrapper">
+              <label>
+                <input class="level__input" type="text" value="30" name="level">
+              </label>
+              <label>
+                <input class="level__input" type="text" value="100" name="level">
+              </label>
+            </div>
             <div class="filter-price-range">
               <label class="">
                 <input class="" type="range" name="price" id="filter-price"> Прайс фильтер
@@ -214,9 +226,9 @@
     <section class="anket">
       <ul class="anket__list">
         <li class="anket__item">
-          <a href=""><img src="./img/mobile/tanya.png" alt="photo"></a>
-          <a href="">like
-          </a>
+          <a class="anket__img" href=""><img src="./img/mobile/tanya.png" alt="photo"></a>
+          <!-- <a href="">like
+          </a> -->
           <a class="anket__name" href=""><h3>Таня Фирсова</h3></a>
           <p>1,5 М</p>
           <div class="circle"></div>
@@ -229,14 +241,14 @@
               <li>сейшелы</li>
             </ul>
           </div>
-          <div class="transport">
+          <div class="anket__transport">
             <p>транспорт:</p>
             <img src="./img/icon/plane.svg" alt="">
             <img src="./img/icon/bus.svg" alt="">
             <img src="./img/icon/bicycle.svg" alt="">
             <img src="./img/icon/run.svg" alt="">
           </div>
-          <div class="level">
+          <div class="anket__level">
             <p>левел:</p>
             <img src="./img/icon/level_99.svg" alt="">
           </div>
@@ -244,9 +256,9 @@
         </li>
         <li class="anket__item">
           <a href=""><img src="./img/mobile/petya.png" alt="photo"></a>
-          <a href="">
+          <!-- <a href="">
             like
-          </a>
+          </a> -->
           <a class="anket__name" href=""><h3>Петя Демин</h3></a>
           <p>1500</p>
           <div class="circle"></div>
@@ -258,14 +270,14 @@
               <li>чехия</li>
             </ul>
           </div>
-          <div class="transport">
+          <div class="anket__transport">
             <p>транспорт:</p>
             <img src="./img/icon/plane.svg" alt="">
             <img src="./img/icon/bus.svg" alt="">
             <img src="./img/icon/bicycle.svg" alt="">
             <img src="./img/icon/run.svg" alt="">
           </div>
-          <div class="level">
+          <div class="anket__level">
             <p>левел:</p>
             <img src="./img/icon/level_80.svg" alt="">
           </div>
@@ -273,9 +285,9 @@
         </li>
         <li class="anket__item">
           <a href=""><img src="./img/mobile/smolov-mobile.png" alt="photo"></a>
-          <a href="">
+          <!-- <a href="">
             like
-          </a>
+          </a> -->
           <a class="anket__name" href=""><h3>Марк Смолов</h3></a>
           <p>170</p>
           <div class="circle"></div>
@@ -288,14 +300,14 @@
               <li>доминика</li>
             </ul>
           </div>
-          <div class="transport">
+          <div class="anket__transport">
             <p>транспорт:</p>
             <img src="./img/icon/plane.svg" alt="">
             <img src="./img/icon/bus.svg" alt="">
             <img src="./img/icon/bicycle.svg" alt="">
             <img src="./img/icon/run.svg" alt="">
           </div>
-          <div class="level">
+          <div class="anket__level">
             <p>левел:</p>
             <img src="./img/icon/level_25.svg" alt="">
           </div>
@@ -303,9 +315,9 @@
         </li>
         <li class="anket__item">
           <a href=""><img src="./img/mobile/larisa.png" alt="photo"></a>
-          <a href="">
+          <!-- <a href="">
             like
-          </a>
+          </a> -->
           <a class="anket__name" href=""><h3>Лариса Роговая</h3></a>
           <p>23</p>
           <div class="circle"></div>
@@ -317,14 +329,14 @@
               <li>Германия</li>
             </ul>
           </div>
-          <div class="transport">
+          <div class="anket__transport">
             <p>транспорт:</p>
             <img src="./img/icon/plane.svg" alt="">
             <img src="./img/icon/bus.svg" alt="">
             <img src="./img/icon/bicycle.svg" alt="">
             <img src="./img/icon/run.svg" alt="">
           </div>
-          <div class="level">
+          <div class="anket__level">
             <p>левел:</p>
             <img src="./img/icon/level_50.svg" alt="">
           </div>
@@ -332,11 +344,10 @@
         </li>
       </ul>
       <a class="show-more" href="#">показать еще</a>
-    </section>
-
-    <section class="arrows">
-      <a href="">left</a>
-      <a href="">right</a>
+      <div class="arrows">
+          <a href="">left</a>
+          <a href="">right</a>
+      </div>
     </section>
   </main>
   <footer class="footer">
