@@ -18,6 +18,11 @@ body {
 
 .main__promo {
   background-color: #161c35;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .main__promo > h2 {
@@ -25,4 +30,24 @@ body {
   line-height: 40px;
   font-weight: 700;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 20px;
+  }
+}
+
+.main__promo a {
+  display: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-left: auto;
+  }
 }
