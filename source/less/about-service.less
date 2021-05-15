@@ -1,5 +1,26 @@
 .about-service {
   background: #161c35 url("../img/about-mobile.png") no-repeat;
+  border-radius: 0 0 28px 28px;
+  position: relative;
+  z-index: 7;
+  padding: 33px 60px 82px 49px;
+
+  @media (min-width: @tablet-width) {
+    background: #182044 url("../img/about-tablet.png") no-repeat;
+    background-position-x: 390px;
+    padding: 41px 0 89px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0 163px 130px;
+    background-position-x: 800px;
+  }
+}
+
+.about-service p {
+  @media (min-width: @tablet-width) {
+    width: 309px;
+  }
 }
 
 .about-service p:nth-child(2) {
@@ -7,6 +28,19 @@
   font-size: 16px;
   line-height: 22px;
   color: white;
+  margin: 0;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 31px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 38px;
+    width: 619px;
+  }
 }
 
 .about-service p:nth-child(3) {
@@ -14,11 +48,28 @@
   font-size: 16px;
   line-height: 22px;
   color: white;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 425px;
+  }
 }
 
 .about-service h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+  padding-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }

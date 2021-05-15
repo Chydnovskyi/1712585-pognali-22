@@ -34,7 +34,7 @@
       <nav class="menu__nav">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#">О сервисе</a>
+            <a href="./index.html">О сервисе</a>
           </li>
           <li class="menu__item">
             <a href="./form.html">Направления</a>
@@ -48,7 +48,7 @@
         Авторизация
       </a>
       <div class="menu__contact">
-        <a class="contact-button" href="tel:88005558628">8 800 555-86-28</a>
+        <a class="button button--contact" href="tel:88005558628">8 800 555-86-28</a>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
       <div class="menu__social">
@@ -105,16 +105,16 @@
         </svg>
       </a>
     </div>
-    <section class="search-country">
-        <ul class="continents">
+    <section class="search-country country">
+        <ul class="search-country__continents">
           <li>Европа</li>
           <li>Азия</li>
           <li>америка</li>
           <li>острова</li>
         </ul>
-        <div class="choice">
+        <div class="search-country__choice">
           <ul class="alphabet alphabet--catalog">
-            <li class="alphabet__A">А</li>
+            <li>А</li>
             <li>Б</li>
             <li>В</li>
             <li>Г</li>
@@ -430,7 +430,7 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </divçç>
         <a href="">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.25 1.75L1.75 12.25" stroke="#192144" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -443,7 +443,7 @@
         <form method="GET" action="https://echo.htmlacademy.ru/">
           <fieldset>
             <legend>Подберите идеального попутчика</legend>
-            <div class="catalog__checkbox hobbies">
+            <div class="catalog__checkbox catalog__checkbox--hobbies">
               <a href="">хобби</a>
               <label for="gym">
                 <input id="gym" type="checkbox" name="gym" checked>
@@ -458,7 +458,7 @@
                 Диван
               </label>
             </div>
-            <div class="catalog__checkbox music">
+            <div class="catalog__checkbox catalog__checkbox--music">
               <a href="">музыка</a>
               <label for="rock">
                 <input id="rock" type="checkbox" name="rock" checked>
@@ -473,7 +473,7 @@
                 Евроденс
               </label>
             </div>
-            <div class="catalog__checkbox eat">
+            <div class="catalog__checkbox catalog__checkbox--eat">
               <a href="">еда</a>
               <label for="meat">
                 <input id="meat" type="checkbox" name="meat" checked>
@@ -488,7 +488,7 @@
                 Веган-сыроед
               </label>
             </div>
-            <div class="catalog__checkbox transport">
+            <div class="catalog__checkbox catalog__checkbox--transport">
               <a href="">транспорт</a>
               <div class="transport--wrapper">
                 <label>
@@ -505,7 +505,7 @@
                 </label>
               </div>
             </div>
-            <div class="level">
+            <div class="catalog__level">
               <a href="">Левел</a>
               <div class="level__wrapper">
                 <label>
@@ -526,7 +526,7 @@
                 <a class="toggle toggle-max" href="#" aria-label="Больше"></a>
               </div>
             </div>
-            <button class="show" type="submit">показать</button>
+            <button class="catalog__show" type="submit">показать</button>
           </fieldset>
         </form>
       </section>
@@ -659,8 +659,11 @@
     </div>
   </main>
   <footer class="footer">
-    <a href="#">
-      <img src="./img/pognali-footer.png" alt="">
+    <a class="footer__pognali" href="#">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./img/footer_pognali_desktop.png">
+        <img src="./img/pognali-footer.png" width="96" height="15" alt="Погнали?»">
+      </picture>
     </a>
     <div class="footer__social">
       <a href="">

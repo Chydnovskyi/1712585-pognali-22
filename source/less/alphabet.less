@@ -1,0 +1,57 @@
+.alphabet {
+  list-style: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1d2e5b;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #cbced9;
+  border-width: 1px 0 0 1px;
+  padding: 0;
+}
+
+.alphabet li {
+  border: 1px solid #cbced9;
+  background: white;
+  width: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0 1px 1px 0;
+}
+
+.alphabet li:first-child {
+  background: #edeff6;
+}
+
+.alphabet--catalog {
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.alphabet--catalog li:first-child {
+  background: #1d2e5b;
+  color: white;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    color: #192144;
+  }
+}
+
+.alphabet--catalog li {
+  @media (min-width: @tablet-width) {
+    background: none;
+    border: none;
+    color: rgba(25, 33, 68, 0.3);
+  }
+}

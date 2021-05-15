@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.continents {
+.search-country__continents {
   list-style: none;
   font-weight: 700;
   font-size: 16px;
@@ -17,45 +17,21 @@
   }
 }
 
-.continents li:first-child {
+.search-country__continents li:first-child {
   color: #192144;
 }
 
-.choice {
+.search-country__choice {
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.alphabet--catalog {
-  @media (min-width: @tablet-width) {
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 60px;
-    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.alphabet--catalog li:first-child {
-  background: #1d2e5b;
-  color: white;
-
-  @media (min-width: @tablet-width) {
-    background: none;
-    color: #192144;
-  }
-}
-
-.alphabet--catalog li {
-  @media (min-width: @tablet-width) {
-    background: none;
-    border: none;
-    color: rgba(25, 33, 68, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
