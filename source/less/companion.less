@@ -15,13 +15,9 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr min-content;
     padding: 171px 60px 80px 60px;
   }
-
-  // @media (min-width: ) {
-
-  // }
 }
 
 .companion__background {
@@ -130,16 +126,101 @@
   }
 }
 
+.companion__item:first-child::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 882px;
+  left: 42px;
+  background: url("../img/icon/level/99.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    bottom: 563px;
+    left: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: 686px;
+  }
+}
+
+.companion__item:last-child::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 445px;
+  left: 42px;
+  background: url("../img/icon/level/80.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    bottom: 563px;
+    left: 415px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: 358px;
+  }
+}
+
 .companion__item h3 {
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: #1d2e5b;
   margin: 13px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 22px;
+  }
+}
+
+.companion__item:first-child h3::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 77px;
+  border-radius: 50%;
+  background: #f97676;
+
+  @media (min-width: @tablet-width) {
+    bottom: 325px;
+    left: 116px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    bottom: 329px;
+    right: 721px;
+  }
+}
+
+.companion__item:last-child h3::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 80px;
+  border-radius: 50%;
+  background: #81e31e;
+
+  @media (min-width: @tablet-width) {
+    bottom: 325px;
+    left: 443px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    bottom: 329px;
+    right: 385px;
   }
 }
 
@@ -169,8 +250,17 @@
   margin-right: 0;
 }
 
+.companion__icon img {
+  margin-right: 10px;
+}
+
+.companion__icon img:last-child {
+  margin-right: 0;
+}
+
 .companion__show {
   min-height: 62px;
+  display: flex;
 
   @media (min-width: @desktop-width) {
     grid-row-start: 3;

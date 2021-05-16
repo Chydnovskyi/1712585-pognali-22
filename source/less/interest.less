@@ -132,10 +132,11 @@
 }
 
 .interest-email {
-  padding: 22px;
-  margin-bottom: 29px;
+  width: 62%;
+  height: 18px;
+  padding: 22px 25px;
   border: none;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   font-family: "BloggerSans", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -143,7 +144,9 @@
   color: rgba(68, 68, 68, 0.3);
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 60px;
+    width: 76%;
+    height: 24px;
+    padding: 28px 36px;
   }
 }
 
@@ -164,4 +167,10 @@
     padding-bottom: 64px;
     line-height: 30px;
   }
+}
+
+.interest__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
