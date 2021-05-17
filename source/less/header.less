@@ -5,14 +5,43 @@
   @media (min-width: @desktop-width) {
     display: flex;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 48px 60px 0 60px;
+  }
 }
 
 .header__logo {
   display: flex;
   height: 15px;
-  padding-top: 19px;
+  padding: 19px 25px 0 25px;
+
+  @media (min-width: @tablet-width) {
+    height: 50px;
+    padding: 40px 40px 0 40px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.header__pognali img {
+  @media (min-width: @tablet-width) {
+    width: 166px;
+    height: 42px;
+  }
 }
 
 .header__menu {
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }

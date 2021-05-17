@@ -1,60 +1,108 @@
 .direction {
   background: #edeff6;
+  border-radius: 0 0 28px 28px;
+  position: relative;
+  z-index: 6;
+  margin-top: -28px;
+  padding: 101px 25px 34px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 149px 75px 75px 75px;
+    background: #edeff6 url("../img/direction-background.png") no-repeat;
+    background-position-x: 416px;
+    background-position-y: 157px;
+  }
 
   @media (min-width: @desktop-width) {
+    background-position-x: 1180px;
+    background-position-y: 190px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
+    padding: 176px 60px 87px 60px;
   }
 }
 
 .direction h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 74px 0 57px 161px;
+  }
 }
 
-.direction p {
+.direction__comment {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   color: #444444;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 104px;
+    width: 378px;
+    font-size: 28px;
+    line-height: 33px;
+  }
 
   @media (min-width: @desktop-width) {
+    margin-left: 161px;
     grid-column-start: 2;
   }
 }
 
-.direction a {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  text-decoration: none;
-  color: #1d2e5b;
-  background: #ffd74b;
-
-  @media (min-width: @desktop-width) {
-    grid-column: 2;
-  }
+.direction__show {
+  display: flex;
+  min-height: 62px;
 }
 
 .direction__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 4;
+    margin: 73px 0 62px 70px;
+  }
+}
+
+.direction__background {
+  background: #e2e5f2;
+  width: 141px;
+  height: 141px;
+  border-radius: 20px;
+  margin-top: -141px;
+  position: relative;
+  top: 108px;
+  z-index: 1;
+  right: 37px;
+
+  @media (min-width: @desktop-width) {
+    top: 75px;
+    right: 66px;
   }
 }
 
 .direction__item {
   width: 270px;
   background-color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin-bottom: 11px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     width: 616px;
@@ -63,33 +111,96 @@
   }
 }
 
-.direction__item img:first-child {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.direction__item:last-child {
+  margin-bottom: 0;
+}
+
+
+.direction__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 24px 24px 24px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 20px 26px;
+    margin-right: auto;
+  }
 }
 
 .direction__item h3 {
+  margin: 0;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  grid-column-start: 1;
-  grid-row-start: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .direction__item p {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
-  grid-column-start: 1;
+  grid-row: ~"2 / 3";
+  grid-column: ~"1 / 3";
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .direction__item img:nth-child(2) {
   width: 35px;
   height: 24px;
+  position: relative;
+  top: -17px;
+  left: 25px;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    left: 71px;
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .direction__people {
-  grid-column-start: 2;
-  grid-row-start: 3;
+  grid-column: 2;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 17px;
+  }
 }
+
+.direction__people::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../img/icon/direction_people.svg") no-repeat;
+  position: relative;
+  left: -16px;
+  top: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    left: -17px;
+    top: 25px;
+  }
+}
+
+// .direction__people p {
+//   padding: 0;
+// }

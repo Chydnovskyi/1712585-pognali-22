@@ -1,20 +1,45 @@
 .interest {
-  background: #192144;
   text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: -38px;
+}
+
+.interest__wrapper {
+  padding: 105px 25px 16px 25px;
+  border-radius: 0 0 28px 28px;
+  background: #192144;
+  position: relative;
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    padding: 133px 73px 60px 75px;
+  }
 }
 
 .interest h2 {
+  margin: 0;
+  padding-bottom: 19px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .interest p {
+  margin: 0;
   font-weight: 300;
   font-size: 16px;
-  line-height: 22px;
   color: white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+  }
 }
 
 .interest a {
@@ -25,6 +50,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  text-transform: uppercase;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
@@ -34,11 +60,59 @@
 .interest__contact a {
   font-weight: 700;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.interest__contact div:first-child {
+  padding-bottom: 23px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 110px;
+    padding-bottom: 0;
+  }
+}
+
+.interest__contact img {
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.interest__number {
+  display: flex;
+  align-items: center;
+}
+
+.interest__email {
+  display: flex;
+  align-items: center;
 }
 
 .interest__map {
   background: #ffd74b;
   text-align: left;
+  position: relative;
+  z-index: 2;
+  margin-top: -28px;
+  padding: 63px 25px 35px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 124px 75px 84px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 116px 135px 56px 283px;
+  }
 }
 
 .interest__map a {
@@ -49,16 +123,54 @@
   text-decoration: none;
 }
 
-.map-geo {
-  display: flex;
-  flex-direction: column;
+.interest iframe {
+  min-width: 320px;
+  min-height: 424px;
+  position: relative;
+  z-index: 1;
+  margin-top: -28px;
+}
 
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
+.interest-email {
+  width: 62%;
+  height: 18px;
+  padding: 22px 25px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-family: "BloggerSans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.3);
+
+  @media (min-width: @tablet-width) {
+    width: 76%;
+    height: 24px;
+    padding: 28px 36px;
   }
 }
 
-.map-geo a:nth-child(2) {
-  font-size: 18px;
-  line-height: 18px;
+.interest__registration {
+  padding-bottom: 30px;
+  line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 32px;
+  }
+}
+
+.interest__question {
+  padding-bottom: 30px;
+  line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 64px;
+    line-height: 30px;
+  }
+}
+
+.interest__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

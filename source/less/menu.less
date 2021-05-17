@@ -1,16 +1,52 @@
 .menu {
   background-color: white;
+  text-align: center;
+  padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 95px;
+    text-align: left;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    padding: 0;
+  }
+}
+
+.menu__wrapper {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.menu__wrapper img {
+  margin-left: 25px;
+}
+
+.menu__nav {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    background-color: #161c35;
   }
 }
 
 .menu__list {
   list-style: none;
+  margin: 45px 0 51px 0;
+  padding: 0;
 
   @media (min-width: @desktop-width) {
     display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    align-items: center;
+    width: 390px;
+    margin: 0;
   }
 }
 
@@ -20,33 +56,46 @@
   line-height: 35px;
   color: #192144;
   text-decoration: none;
-}
 
-.button--autorization {
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
-  text-decoration: none;
-  order: 1;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .menu__contact {
   display: flex;
   flex-direction: column;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .menu__contact a {
+  margin-left: 86px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #192144;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
-.menu__social a {
-  text-decoration: none;
+.menu__contact a:first-child {
+  margin: 66px 0 27px 86px;
 }
 
 .menu__social {
@@ -54,8 +103,43 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 53px 0 41px 0;
 
   @media (min-width: @tablet-width) {
     justify-content: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.menu__social a {
+  text-decoration: none;
+  padding-right: 27px;
+}
+
+.menu__social a:last-child {
+  padding: 0;
+}
+
+.menu__social svg:first-child {
+  @media (min-width: @tablet-width) {
+    width: 14px;
+    height: 28px;
+  }
+}
+
+.menu__social svg:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    width: 31px;
+    height: 16px;
+  }
+}
+
+.menu__social svg:last-child {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
   }
 }
