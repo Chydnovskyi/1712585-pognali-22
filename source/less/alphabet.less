@@ -1,4 +1,6 @@
 .alphabet {
+  width: 100%;
+  height: 205px;
   list-style: none;
   font-weight: 500;
   font-size: 14px;
@@ -9,20 +11,49 @@
   border: 1px solid #cbced9;
   border-width: 1px 0 0 1px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 262px;
+    height: 346px;
+    margin: 35px 79px 33px 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 361px;
+    height: 408px;
+    border-width: 0;
+    margin: 26px 32px;
+  }
 }
 
 .alphabet li {
   border: 1px solid #cbced9;
   background: white;
-  width: 19%;
+  width: 19.4%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-width: 0 1px 1px 0;
+
+  @media (min-width: @desktop-width) {
+    width: 15.4%;
+    border-width: 1px;
+    margin: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 24px 27px;
+  }
 }
 
 .alphabet li:first-child {
   background: #edeff6;
+
+  @media (min-width: @tablet-width) {
+    color: white;
+    background: #1d2e5b;
+  }
 }
 
 .alphabet--catalog {

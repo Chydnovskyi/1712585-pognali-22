@@ -1,24 +1,48 @@
 .my-plans {
   background: #dfe3f0;
+  min-height: 458px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 574px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 470px;
+  }
 }
 
 .my-plans__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
 .my-plans__item {
   background: white;
+  margin: 0 25px 10px;
+  border-radius: 10px;
+  padding: 24px 0 23px 23px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-between;
   }
+}
+
+.my-plans__item:last-child {
+  margin-bottom: 0;
+}
+
+.my-plans legend {
+  background: #dfe3f0;
 }
 
 .my-plans__item h3 {
@@ -26,11 +50,16 @@
   font-size: 16px;
   line-height: 16px;
   color: #1d2e5b;
+  margin: 0;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 40px;
+    border-bottom: 1px solid rgba(203, 206, 217, 0.3);
     grid-column-start: 1;
     grid-column-end: 4;
-
+    font-size: 24px;
+    line-height: 24px;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -46,6 +75,10 @@
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 36px;
+  }
 }
 
 .my-plans__item p {
@@ -55,6 +88,35 @@
   color: #1d2e5b;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.my-plans__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 14px;
+    grid-column: ~"1 / 4";
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 589px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.my-plans__wrapper p:nth-last-child(2) {
+  padding-top: 5px;
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 32px;
+  }
 }
 
 .my-plans__item a {
@@ -64,4 +126,8 @@
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+  }
 }

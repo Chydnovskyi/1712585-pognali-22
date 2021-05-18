@@ -1,4 +1,5 @@
 .button {
+  font-family: "BloggerSans", sans-serif;
   width: 100%;
   font-weight: 700;
   font-size: 18px;
@@ -176,4 +177,169 @@
 .button--interest::before {
   right: auto;
   background-position-y: 2px;
+}
+
+.button--minus {
+  position: absolute;
+  left: 20px;
+  top: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    top: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: auto;
+    left: 243px;
+    width: 20px;
+  }
+}
+
+.button--minus svg {
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button--plus {
+  position: absolute;
+  right: 20px;
+  top: 28px;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+    top: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: auto;
+    right: auto;
+    left: 350px;
+  }
+}
+
+.button--plus svg {
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button--add-plans {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 7px 41px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 175px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    padding: 29px 75px 27px 34px;
+    box-sizing: content-box;
+  }
+}
+
+.button--add-plans::before {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    left: 280px;
+    right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 390px;
+  }
+}
+
+.button--back {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+    width: 185px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.button--back::before {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    transform: rotate(-180deg);
+    right: 204px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 322px;
+  }
+}
+
+.button-choice {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-align: left;
+  border: none;
+  background: #1d2e5b;
+  border-radius: 4px 4px 0 0;
+  text-transform: uppercase;
+  padding: 14px 17px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+    min-height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.button-choice::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: url("../img/icon/icon_close-white.svg") no-repeat;
+  top: 17px;
+  right: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 24px;
+    top: 22px;
+    right: 20px;
+    background: url("../img/icon/icon_close-tabletwhite.svg") no-repeat;
+  }
 }

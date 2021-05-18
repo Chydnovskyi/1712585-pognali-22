@@ -87,6 +87,8 @@
   line-height: 18px;
   color: #192144;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -96,6 +98,36 @@
 
 .menu__contact a:first-child {
   margin: 66px 0 27px 86px;
+}
+
+.menu__contact a:first-child::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 24px;
+  background: url("../img/contacts_phone.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 117px;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.menu__contact a:last-child::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 24px;
+  background: url("../img/contacts_email.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 117px;
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .menu__social {

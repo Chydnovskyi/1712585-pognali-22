@@ -4,12 +4,47 @@
   line-height: 18px;
   color: #1d2e5b;
   text-transform: uppercase;
+  width: 100%;
+  border: 1px solid #cbced9;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0;
+  margin-top: 38px;
+  padding: 0;
+  position: relative;
+}
+
+.form__checkbox legend {
+  width: 82px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -10px;
+    right: 151px;
+    background: #edeff6;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 129px;
+  }
 }
 
 .form__checkbox--textarea {
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.6);
+  width: 270px;
+  height: 90px;
+  box-sizing: border-box;
+  border: none;
+  background: rgb(237, 239, 246);
+  padding: 27px 26px;
+  margin: 0;
+  resize: none;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__checkbox--tags {
@@ -17,11 +52,92 @@
     grid-column-start: 1;
     grid-column-end: 4;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column-end: 3;
+  }
+}
+
+.form__checkbox--tags legend {
+  @media (min-width: @tablet-width) {
+    right: 47%;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: auto;
+    left: 3%;
+  }
 }
 
 .form__checkbox--transport {
+  min-height: 62px;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
     grid-row-start: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 384px;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    margin-left: 140px;
+  }
+}
+
+.form__checkbox--transport legend {
+  width: 110px;
+}
+
+.form__checkbox--transport label:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 96px;
+  background: url("../img/icon/bicycle.svg") no-repeat;
+
+  @media (min-width: @desktop-width) {
+    top: 27px;
+  }
+}
+
+.form__checkbox--transport label:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 128px;
+  background: url("../img/icon/bicycle.svg") no-repeat;
+
+  @media (min-width: @desktop-width) {
+    top: 27px;
+  }
+}
+
+.form__checkbox--transport label:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url("../img/icon/bicycle.svg") no-repeat;
+
+  @media (min-width: @desktop-width) {
+    left: 160px;
+    top: 27px;
+  }
+}
+
+.form__checkbox--transport label:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 192px;
+  background: url("../img/icon/bicycle.svg") no-repeat;
+
+  @media (min-width: @desktop-width) {
+    top: 27px;
   }
 }
