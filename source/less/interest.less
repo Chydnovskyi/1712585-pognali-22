@@ -6,14 +6,19 @@
 }
 
 .interest__wrapper {
-  padding: 105px 25px 16px 25px;
+  padding: 108px 25px 16px 25px;
   border-radius: 0 0 28px 28px;
   background: #192144;
   position: relative;
   z-index: 3;
 
   @media (min-width: @tablet-width) {
-    padding: 133px 73px 60px 75px;
+    padding: 114px 73px 60px 75px;
+    border-radius: 0 0 55px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 145px 135px 100px;
   }
 }
 
@@ -26,6 +31,7 @@
   color: #ff8d30;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 59px;
     font-size: 45px;
     line-height: 45px;
   }
@@ -55,6 +61,10 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-content: center;
+  }
 }
 
 .interest__contact a {
@@ -68,8 +78,6 @@
 }
 
 .interest__contact div:first-child {
-  padding-bottom: 23px;
-
   @media (min-width: @desktop-width) {
     padding-right: 110px;
     padding-bottom: 0;
@@ -86,6 +94,12 @@
     width: 68px;
     height: 68px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 31px;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .interest__number {
@@ -96,6 +110,13 @@
 .interest__email {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .interest__map {
@@ -107,11 +128,11 @@
   padding: 63px 25px 35px 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 124px 75px 84px 75px;
+    padding: 97px 75px 84px 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 116px 135px 56px 283px;
+    padding: 82px 135px 56px 283px;
   }
 }
 
@@ -129,6 +150,10 @@
   position: relative;
   z-index: 1;
   margin-top: -28px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 581px;
+  }
 }
 
 .interest-email {
@@ -147,6 +172,7 @@
     width: 76%;
     height: 24px;
     padding: 28px 36px;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -155,17 +181,48 @@
   line-height: 22px;
 
   @media (min-width: @tablet-width) {
+    margin-left: -17px;
+    padding-bottom: 64px;
     line-height: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 58px;
+  }
+}
+
+.interest__registration br:first-child {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.interest__registration br:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .interest__question {
-  padding-bottom: 30px;
+  padding-top: 29px;
+  padding-bottom: 18px;
   line-height: 22px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 64px;
+    padding-top: 60px;
+    padding-bottom: 42px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 46px;
+  }
+}
+
+.interest__question br {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

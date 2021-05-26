@@ -2,12 +2,14 @@
   background-color: #161c35;
   color: #ffffff;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    background-color: #192144;
     display: flex;
   }
 
   @media (min-width: @desktop-width) {
     padding: 48px 60px 0 60px;
+    background-color: #161c35;
   }
 }
 
@@ -15,6 +17,7 @@
   display: flex;
   height: 15px;
   padding: 19px 25px 0 25px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     height: 50px;
@@ -27,14 +30,33 @@
   }
 }
 
+.header__logo::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #ffffff;
+    right: -99px;
+    top: 26px;
+  }
+}
+
 .header__pognali img {
   @media (min-width: @tablet-width) {
     width: 166px;
     height: 42px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    height: 52px;
+  }
 }
 
 .header__menu {
+  display: none;
   margin-left: auto;
 
   @media (min-width: @tablet-width) {

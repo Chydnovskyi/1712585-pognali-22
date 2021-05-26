@@ -13,7 +13,7 @@
 <body>
   <header class="header">
     <div class="header__logo">
-      <a class="header__pognali" href="#">
+      <a class="header__pognali" href="./index.html">
         <picture>
           <source media="(min-width: 768px)" srcset="./img/pognali-tablet.png">
           <img src="./img/pognali.png" width="96" height="15" alt="Погнали?»">
@@ -29,7 +29,7 @@
         <nav class="menu__nav">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#">О сервисе</a>
+              <a href="./index.html">О сервисе</a>
             </li>
             <li class="menu__item">
               <a href="./form.html">Направления</a>
@@ -86,30 +86,25 @@
           </picture>
           <picture>
             <source media="(min-width: 1440px)" srcset="./img/demin-desktop1.png">
-          <img src="img/mobile/petya.png" alt="">
+          <img src="img/petya-form.png" alt="">
           </picture>
         <label class="form__change-photo">
           <input class="visually-hidden" type="file" name="photo"> сменить фото
         </label>
         <fieldset class="form__checkbox form__checkbox--tags">
           <legend>Тэги</legend>
-          <textarea class="form__checkbox--textarea" name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт
-          </textarea>
+          <textarea class="form__checkbox--textarea" name="tags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
         </fieldset>
         <fieldset class="form__checkbox form__checkbox--transport">
           <legend>Транспорт</legend>
-          <label>
-            <input class="visually-hidden" type="checkbox" name="plane">
-          </label>
-          <label>
-            <input class="visually-hidden" type="checkbox" name="bus">
-          </label>
-          <label>
-            <input class="visually-hidden" type="checkbox" name="bycicle">
-          </label>
-          <label>
-            <input class="visually-hidden" type="checkbox" name="run">
-          </label>
+          <input class="visually-hidden checkbox checkbox__input--plane" id="plane-form" type="checkbox" name="plane">
+          <label for="plane-form"></label>
+          <input class="visually-hidden checkbox checkbox__input--bus" id="bus-form" type="checkbox" name="bus">
+          <label for="bus-form"></label>
+          <input class="visually-hidden checkbox checkbox__input--bycicle" id="bycicle-form" type="checkbox" name="bycicle">
+          <label for="bycicle-form"></label>
+          <input class="visually-hidden checkbox checkbox__input--run" id="run-form" type="checkbox" name="run">
+          <label for="run-form"> </label>
         </fieldset>
       </div>
       <fieldset class="form__fieldset my-plans">
@@ -119,7 +114,7 @@
             <h3><span>1.</span>  Франция, Италия</h3>
             <div class="my-plans__wrapper">
               <p>3 попутчика</p>
-              <p>26 мар &#8212; 29 мар</p>
+              <p>26 мар &mdash; 29 мар</p>
               <a href="#">изменить</a>
             </div>
           </li>
@@ -127,18 +122,31 @@
             <h3><span>2.</span> Таиланд, Индонезия</h3>
             <div class="my-plans__wrapper">
               <p>1 попутчик</p>
-              <p>1 июл &#8212; 15 июл</p>
+              <p>1 июл &mdash; 15 июл</p>
               <a href="#">изменить</a>
             </div>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__fieldset add-plans">
-        <legend>Добавить план:</legend>
+        <legend>Добавить план:
+        </legend>
+        <div class="add-plans__pointer">
+          <div class="add-plans__pointer-item add-plans__pointer-item--active"></div>
+          <div class="add-plans__pointer-item"></div>
+          <div class="add-plans__pointer-item"></div>
+        </div>
         <ul class="add-plans__list">
           <li class="add-plans__item">
-            <h3>Шаг 1.<br>Даты пребывания</h3>
-            <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+            <div class="add-plans__promo">
+              <h3>Шаг 1.<br>Даты пребывания</h3>
+              <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <ul class="add-promo__list">
+                <li class="add-promo__item add-promo__item--active">Даты</li>
+                <li class="add-promo__item">Маршрут</li>
+                <li class="add-promo__item">Развлечения</li>
+              </ul>
+            </div>
             <div class="popyt">
               <div class="popyt__search">
                 <label for="popyt1">ищу попутчиков: <span>чел.</span></label>
@@ -244,8 +252,15 @@
             <a class="button button--add-plans" href="#">Следующий шаг</a>
           </li>
           <li class="add-plans__item">
-            <h3>Шаг 2. Маршрут</h3>
-            <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+            <div class="add-plans__promo">
+              <h3>Шаг 2. <br> Маршрут</h3>
+              <p>Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <ul class="add-promo__list">
+                <li class="add-promo__item">Даты</li>
+                <li class="add-promo__item add-promo__item--active">Маршрут</li>
+                <li class="add-promo__item">Развлечения</li>
+              </ul>
+            </div>
             <div class="add-plans__wrapper add-plans__wrapper--first">
               <label class="add-plans__steptwo plans-country" for="step2-country1">
                 <select id="step2-country1" name="country">
@@ -256,28 +271,28 @@
                       <rect width="35" height="24" fill="url(#pattern0)"/>
                       <defs>
                       <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                      <use xlink:href="#image0" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
+                      <use xlink:href="#image1" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
                       </pattern>
-                      <image id="image0" width="70" height="47" xlink:href="data:image/png;base64,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"/>
+                      <image id="image1" width="70" height="47" xlink:href="data:image/png;base64,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"/>
                       </defs>
                     </svg>
                   </span>
               </label>
               <button class="add-plans__button" type="button"></button>
             </div>
-            <div class="add-plans__wrapper">
+            <div class="add-plans__wrapper add-plans__wrapper--second">
               <label class="add-plans__steptwo plans-country" for="step2-country2">
-                <select id="step2-country1" name="country">
+                <select id="step2-country2" name="country">
                   <option>Чехия</option>
                   </select>
                   <span class="add-plans__span">
                     <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <rect width="35" height="24" fill="url(#pattern0)"/>
+                      <rect width="35" height="24" fill="url(#pattern3)"/>
                       <defs>
-                      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                      <use xlink:href="#image0" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
+                      <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image3" transform="translate(-0.0106383) scale(0.0145897 0.0212766)"/>
                       </pattern>
-                      <image id="image0" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII="/>
+                      <image id="image3" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAADg0lEQVRogeWbb0hdZRjAf/fMXIEsCpcJRQsM2pDNsYpG0J8v0ofYPkgFFfSlOfoQMcamgiIVZKlFRIHGQBhCsDGGrKD8VF7/ZJpeFR25TadO5/yTXp1/rru+bzzXKwzhqlfP8dy95/fl3nMuvOd5fjyc877Pe67vp+oA7+ccIMqbwEngZSAN8GE2GrgD/AVUAr+tZrtrKfkN5hfCD2dlplX7fJQAzwMpHpBCNMeUaM4fAPuBX4HwrozMt+m98V/VdDD03pFDafh8XvARk0zgGeCyiMkGym7cnGZsYp4Xs9K9Lucg0CRiSqMlxM2hIMOjs7x0OB3L8rScFAt49f4zDX8PU/ZjM/fCyr2w3OeoiEldG0ZLYJQvv2sitLTsQScRnrBi/dLRPcYX3zTIE2tnQ0oMrJhihJ7eST4vr+fu3D0POVlhXTFCb98UxWX1zMyGdiikxGBDMUL/wDSFX/mZml70gJIVNiVGuDUyS2FJHeOT8w6HlBhsWoxwe2yOwhJ/5NN04hIjSMVI5UgFmUzcYgS51xR97ad/MGismi2JEYIzIYpL/Vzrm7I3ogRhy2IEmd98Vl4fme+YxrbECDIzlhmyzJRNYttiBFlTydqqtWPUGDW2iBFkNV76QzONLcN2DekqtokRwmHFtxUt/Nk4+OCZWIOtYgSlNN+fa6P2j367h95RbBcjaK2pPB/gSu31xM18AxwRQ0QOVP3cxaVf/nXqEo6S5OTg0jVWF2tYvDDgfqZx4pgYC81H6iqv6xGnLuEojoh5CMUnqosX9HjiZBontot5hDCnVQcH9IO9hrJVzB6WyFMBntUzdg7rCraJSWWRguU20jGjw2eLmKf0HPmqjccxp2G+bTEZOshZFSAFs7ZYtiXmoJ7klOpkN+btWG5ZzFF9h49VN0mYuce9JTHZeogPVS++yAtJZhK3mBzdR47qM1bIKpsWI9UhVSLV4gU2JUbuIydVD69oc1qXG7GhGHnifKo6ydLm7QSsx7piZG5yRgV4Tpu7sRaLmGIeI0S+audpfdf1IN1AxEysfd3sSeYpWG5nLwueEbGGSWlt+u8/t0/PUrzc6mUpQp2IqVg9kh5KkfqHR1lyNyz3qRQxtUD1ET1OnmqPNJo8TjXwe+Tm+5oeyT2hriZb6Hc8LuUikCtfrLf0ALmqZ8FCvwscA2qi/8jwCpKr5HwckMJYAPgfWyk7qoZ9+QUAAAAASUVORK5CYII="/>
                       </defs>
                     </svg>
                   </span>
@@ -285,16 +300,16 @@
               <button class="add-plans__button" type="button"></button>
             </div>
             <div class="add-plans__wrapper">
-              <label class="add-plans__steptwo add-country" for="step2-country2">
-                <select id="step2-country1" name="country">
+              <label class="add-plans__steptwo add-country" for="step2-country3">
+                <select id="step2-country3" name="country">
                   <option>Выберете страну</option>
                 </select>
               </label>
               <button class="add-plans__button" type="button"></button>
             </div>
             <div class="add-plans__wrapper add-plans__wrapper--last">
-            <label class="add-plans__steptwo add-country" for="step2-country3">
-              <input type="button" value="Добавить страну">
+            <label class="add-plans__steptwo add-country" for="add-country">
+              <input id="add-country" type="button" value="Добавить страну">
             </label>
             <button class="add-plans__plus" type="button">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,8 +369,15 @@
             </div>
           </li>
           <li class="add-plans__item">
-            <h3>Шаг 3. Развлечения</h3>
-            <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <div class="add-plans__promo">
+              <h3>Шаг 3. <br> Развлечения</h3>
+              <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="add-promo__list">
+                <li class="add-promo__item">Даты</li>
+                <li class="add-promo__item">Маршрут</li>
+                <li class="add-promo__item add-promo__item--active">Развлечения</li>
+              </ul>
+            </div>
             <fieldset class="add-plans__fieldset add-plans__fieldset--line">
               <legend>Босния и Герцеговина<img src="./img/icon/country/Bosnia-and-Herzegovina-2.svg" alt=""></legend>
               <textarea name="plane" cols="30" rows="10">План действий</textarea>

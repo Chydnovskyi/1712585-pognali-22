@@ -8,9 +8,10 @@
   color: #1d2e5b;
   background: #ffd74b;
   border-radius: 10px;
-  padding: 25px;
+  padding: 23px;
 
   @media (min-width: @tablet-width) {
+    border-radius: 20px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -20,14 +21,14 @@
   content: "";
   position: absolute;
   width: 18px;
-  height: 16px;
+  height: 18px;
   background: url("../img/icon/btn/strelka.png") no-repeat;
-  background-position-y: 3px;
+  background-position-y: 5px;
   background-position-x: 5px;
   right: 48px;
 
   @media (min-width: @tablet-width) {
-    right: 102px;
+    right: 111px;
   }
 
   @media (min-width: @desktop-width) {
@@ -74,11 +75,12 @@
   text-decoration: none;
 }
 
-.about-service--button {
+.button--about-service {
   display: none;
   width: 168px;
   height: 24px;
   padding: 29px 74px 27px 33px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-left: 34px;
@@ -90,10 +92,9 @@
   }
 }
 
-.about-service--button::before {
+.button--about-service::before {
   @media (min-width: @tablet-width) {
-    right: auto;
-    left: 300px;
+    right: 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -102,26 +103,44 @@
 }
 
 .button--direction {
+  @media (min-width: @tablet-width) {
+    padding: 30px 31px 27px 31px;
+    width: 618px;
+    box-sizing: border-box;
+    margin-left: 26px;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 29px 74px 27px 32px;
-    width: 168px;
-    height: 24px;
+    width: 275px;
+    height: 80px;
     grid-column: 2;
     margin-left: 161px;
   }
 }
 
 .button--direction::before {
+  @media (min-width: @tablet-width) {
+    background-position-y: 5px;
+    background-position-x: 2px;
+  }
+
   @media (min-width: @desktop-width) {
-    right: 282px;
+    right: 256px;
   }
 }
 
 .button--companion {
   padding: 22px 133px 22px 23px;
 
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    padding: 27px 133px 27px 32px;
+    box-sizing: border-box;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 171px;
+    width: 280px;
     min-height: 24px;
     padding: 29px 75px 27px 33px;
   }
@@ -130,11 +149,12 @@
 .button--companion::before {
   @media (min-width: @desktop-width) {
     right: auto;
-    left: 297px;
+    left: 358px;
   }
 }
 
 .button--close {
+  display: none;
   margin-left: auto;
   margin-right: 25px;
   background: none;
@@ -142,6 +162,7 @@
 }
 
 .button--close::before {
+  display: none;
   content: "";
   position: absolute;
   width: 18px;
@@ -170,19 +191,38 @@
     margin-left: 0;
     width: 80px;
     height: 80px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+    justify-content: flex-start;
+    margin-left: -84px;
+    padding-left: 37px;
   }
 }
 
 .button--interest::before {
   right: auto;
   background-position-y: 2px;
+
+  @media (min-width: @desktop-width) {
+    right: 167px;
+  }
+}
+
+.button--interest span {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .button--minus {
   position: absolute;
-  left: 20px;
-  top: 27px;
+  left: 14px;
+  top: 36px;
 
   @media (min-width: @tablet-width) {
     width: 20px;
@@ -205,8 +245,8 @@
 
 .button--plus {
   position: absolute;
-  right: 20px;
-  top: 28px;
+  right: 14px;
+  top: 40px;
 
   @media (min-width: @tablet-width) {
     width: 20px;
@@ -236,8 +276,10 @@
   line-height: 30px;
   text-transform: uppercase;
   border-radius: 20px;
-  padding: 7px 41px;
+  padding: 8px 44px 3px 36px;
   border: none;
+  width: 100%;
+
 
   @media (min-width: @tablet-width) {
     width: 175px;
@@ -263,6 +305,11 @@
   }
 }
 
+.add-plans__item:last-child .button--add-plans {
+  margin-top: -8px;
+  width: 230px;
+}
+
 .button--back {
   display: flex;
   justify-content: center;
@@ -274,6 +321,7 @@
   background: none;
   padding: 0;
   border-radius: 0;
+  margin-top: 11px;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;

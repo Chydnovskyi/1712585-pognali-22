@@ -1,0 +1,156 @@
+.transport--wrapper {
+  display: flex;
+  margin: 15px 0 8px 6px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  margin-left: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 16px;
+    margin-bottom: 6px;
+  }
+}
+
+.transport--wrapper label {
+  padding: 0;
+  width: 31px;
+  height: 31px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.transport--wrapper label:last-child {
+  margin-right: 0;
+}
+
+.transport__input--plane + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon/catalog-transport/icon_plane.svg") no-repeat;
+  top: 8px;
+  left: 8px;
+}
+
+.transport__input--plane:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  opacity: 0.2;
+  background: url("../img/icon/catalog-transport/icon_plane.svg") no-repeat;
+  top: 8px;
+  left: 8px;
+}
+
+.transport__input--bus + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon/catalog-transport/icon_bus.svg") no-repeat;
+  top: 7px;
+  left: 7px;
+}
+
+.transport__input--bus:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  opacity: 0.2;
+  background: url("../img/icon/catalog-transport/icon_bus.svg") no-repeat;
+  top: 7px;
+  left: 7px;
+}
+
+.transport__input--bycicle + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon/catalog-transport/icon_bicycle.svg") no-repeat;
+  top: 7px;
+  left: 8px;
+}
+
+.transport__input--bycicle:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  opacity: 0.2;
+  background: url("../img/icon/catalog-transport/icon_bicycle.svg") no-repeat;
+  top: 7px;
+  left: 8px;
+}
+
+.transport__input--run + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url("../img/icon/catalog-transport/icon_run.svg") no-repeat;
+  top: 7px;
+  left: 7px;
+}
+
+.transport__input--run:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  opacity: 0.2;
+  background: url("../img/icon/catalog-transport/icon_run.svg") no-repeat;
+  top: 7px;
+  left: 7px;
+}
+
+// transport__anket
+
+.transport__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.transport__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: #edeff6;
+  border-radius: 50%;
+  margin-right: 1px;
+}
+
+.transport__item:last-child {
+  margin-right: 0;
+}
+
+.transport__item svg {
+  opacity: 0.15;
+}
+
+.transport__item--active svg {
+  opacity: 1;
+}

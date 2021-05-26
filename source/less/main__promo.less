@@ -5,6 +5,7 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
+    border-radius: 0 0 55px 55px;
     display: flex;
     align-items: center;
   }
@@ -28,21 +29,39 @@
   }
 }
 
+.catalog .main__promo::before {
+  content: "";
+  position: absolute;
+  width: 172px;
+  height: 5px;
+  background: #ff8d30;
+  border-radius: 4px;
+  bottom: -2px;
+  left: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 288px;
+    height: 8px;
+    left: 75px;
+    bottom: -5px;
+  }
+}
+
 .main__promo > h2 {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   color: @white;
-  padding: 60px 25px 12px 25px;
+  padding: 58px 25px 12px 25px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 134px 0 66px 75px;
+    padding: 152px 0 87px 75px;
     font-size: 60px;
     line-height: 20px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding: 124px 0 68px 124px;
   }
 }
@@ -55,9 +74,21 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    margin-left: 156px;
+    padding-top: 70px;
     display: block;
-    margin-left: auto;
   }
+}
+
+.main__promo a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 16px;
+  background: url("../img/icon/icon_arrow_bend.svg") no-repeat;
+  right: -59px;
 }

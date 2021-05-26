@@ -1,6 +1,144 @@
 .filter-country {
-  background: #e2e5f2;
+  width: 100%;
+  background: #dfe3f0;
   display: flex;
+  min-height: 75px;
+  margin-top: -13px;
+  padding: 33px 29px 17px 25px;
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 72px 73px 56px 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 75px 120px 57px 80px;
+  }
+}
+
+.filter-country__list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.filter-country__item {
+  display: none;
+  color: #192144;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-right: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
+  }
+}
+
+.filter-country__item:first-child {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-right: 30px;
+  }
+}
+
+.filter-country__item:nth-child(5) {
+  @media (min-width: @tablet-width) {
+    margin-right: 70px;
+  }
+}
+
+.filter-country__item:nth-child(6) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+  }
+}
+
+.filter-country__item:nth-child(7) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.filter-country__item--wrapper {
+  width: 233px;
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    width: 293px;
+  }
+}
+
+.filter-country__item--wrapper svg {
+  margin-top: 3px;
+  margin-right: 11px;
+}
+
+.filter-country__item--active {
+  opacity: 1;
+}
+
+.filter-country__item--pointer {
+  margin-left: auto;
+  display: block;
+  margin-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
+  }
+}
+
+.filter-country__pointer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 30px;
+  }
+}
+
+.filter-country__pointer li {
+  display: block;
+  margin-left: 0;
+}
+
+.filter-country__pointer-item {
+  width: 3px;
+  height: 3px;
+  background: #1d2e5b;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .filter-country h3 {

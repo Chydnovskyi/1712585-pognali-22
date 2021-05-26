@@ -1,0 +1,91 @@
+.filter-price-range {
+  position: relative;
+  margin: 0 5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 61px 0 66px;
+  }
+}
+
+.filter-price-range a {
+  position: absolute;
+  padding-bottom: 0;
+}
+
+.filter-price-range a::before {
+  display: none;
+}
+
+.filter-price-range label {
+  position: static;
+  padding: 0;
+}
+
+.scale {
+  width: 211px;
+  height: 2px;
+  margin: 25px 0 14px 0;
+  background: rgba(29, 46, 91, 0.2);
+
+  @media (min-width: @tablet-width) {
+    margin: 24px 0 14px 0;
+    width: 281px;
+    height: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 192px;
+  }
+}
+
+.bar {
+  width: 138px;
+  height: 2px;
+  background: #1d2e5b;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 166px;
+    height: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 118px;
+  }
+}
+
+.toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #1d2e5b;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.toggle-min {
+  top: 20px;
+  left: 62px;
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    left: 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 63px;
+  }
+}
+
+.toggle-max {
+  top: 20px;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+  }
+}

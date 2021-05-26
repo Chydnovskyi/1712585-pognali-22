@@ -9,7 +9,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   margin: 0;
-  margin-top: 38px;
+  margin-top: 21px;
   padding: 0;
   position: relative;
 }
@@ -34,11 +34,10 @@
   line-height: 18px;
   color: rgba(68, 68, 68, 0.6);
   width: 270px;
-  height: 90px;
+  height: 48px;
   box-sizing: border-box;
   border: none;
   background: rgb(237, 239, 246);
-  padding: 27px 26px;
   margin: 0;
   resize: none;
 
@@ -48,6 +47,9 @@
 }
 
 .form__checkbox--tags {
+  height: 98px;
+  margin-top: 25px;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -70,8 +72,13 @@
 }
 
 .form__checkbox--transport {
-  min-height: 62px;
+  display: flex;
+  padding-top: 7px;
+  justify-content: center;
+  min-height: 72px;
   position: relative;
+  margin-top: 16px;
+
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
@@ -90,54 +97,10 @@
   width: 110px;
 }
 
-.form__checkbox--transport label:nth-child(2)::before {
-  content: "";
-  position: absolute;
+.form__checkbox--transport label {
   width: 32px;
   height: 32px;
-  left: 96px;
-  background: url("../img/icon/bicycle.svg") no-repeat;
-
-  @media (min-width: @desktop-width) {
-    top: 27px;
-  }
-}
-
-.form__checkbox--transport label:nth-child(3)::before {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 128px;
-  background: url("../img/icon/bicycle.svg") no-repeat;
-
-  @media (min-width: @desktop-width) {
-    top: 27px;
-  }
-}
-
-.form__checkbox--transport label:nth-child(4)::before {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background: url("../img/icon/bicycle.svg") no-repeat;
-
-  @media (min-width: @desktop-width) {
-    left: 160px;
-    top: 27px;
-  }
-}
-
-.form__checkbox--transport label:nth-child(5)::before {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 192px;
-  background: url("../img/icon/bicycle.svg") no-repeat;
-
-  @media (min-width: @desktop-width) {
-    top: 27px;
-  }
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
 }

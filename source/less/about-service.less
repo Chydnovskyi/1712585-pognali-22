@@ -1,33 +1,58 @@
 .about-service {
   background: #161c35 url("../img/about-mobile.png") no-repeat;
+  background-position-x: 18px;
+  background-position-y: 11px;
   border-radius: 0 0 28px 28px;
   position: relative;
   z-index: 7;
-  padding: 33px 60px 82px 49px;
+  padding: 43px 60px 82px 49px;
+  margin-top: -52px;
 
   @media (min-width: @tablet-width) {
-    background: #182044 url("../img/about-tablet.png") no-repeat;
-    background-position-x: 390px;
+    background: #182044;
     padding: 41px 40px 89px 40px;
+    border-radius: 0 0 55px 55px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -310px;
     padding: 62px 0 163px 60px;
     background-position-x: 800px;
   }
 }
 
+.about-service::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 378px;
+    height: 548px;
+    background: url("../img/about-tablet.png") no-repeat;
+    z-index: 2;
+    right: 6px;
+    top: 113px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 630px;
+    height: 665px;
+    background: url("../img/img_back_about.png");
+    right: 60px;
+    top: 78px;
+  }
+}
+
 .about-service__background {
-  position: relative;
+  position: absolute;
   border-radius: 20px;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 688px;
     height: 212px;
-    margin-top: -212px;
     background: #141b3b;
-    top: 168px;
+    top: 64px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,7 +66,7 @@
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    width: 309px;
+    width: 302px;
   }
 }
 
@@ -78,10 +103,11 @@
     margin-left: 34px;
     font-size: 21px;
     line-height: 25px;
-    margin-bottom: 73px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
     margin-left: 70px;
     width: 425px;
   }
@@ -99,11 +125,14 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 34px;
+    padding-top: 65px;
+    padding-bottom: 41px;
     font-size: 45px;
     line-height: 45px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 56px;
     margin-left: 70px;
   }
 }
