@@ -1,7 +1,7 @@
 .companion {
   background: #192144 url("../img/smolov-back-desktop.png") no-repeat;
   background-position-x: 152px;
-  background-position-y: 69px;
+  background-position-y: 93px;
   border-radius: 0 0 28px 28px;
   position: relative;
   z-index: 5;
@@ -9,14 +9,19 @@
   padding: 68px 25px 31px 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 208px 74px 87px 74px;
+    padding: 200px 74px 87px 74px;
+    background-position-x: 39px;
+    background-position-y: 486px;
+    border-radius: 0 0 55px 55px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr min-content;
-    padding: 171px 60px 80px 60px;
+    grid-template-rows: min-content min-content min-content;
+    background-position-x: 549px;
+    background-position-y: 190px;
+    padding: 171px 60px 54px 129px;
   }
 }
 
@@ -25,41 +30,110 @@
   width: 113px;
   height: 132px;
   border-radius: 0 20px 20px 0;
-  margin-top: -77px;
+  position: absolute;
+  z-index: 1;
+  top: 93px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 212px;
+    height: 212px;
+    border-radius: 20px;
+    top: 129px;
+    left: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 56px;
+  }
 }
 
 .companion h2 {
   margin: 0;
-  padding-bottom: 49px;
+  padding: 58px 0 19px 24px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 55px;
     font-size: 45px;
     line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 16px 0 12px 0;
   }
 }
 
 .companion__paragraf {
+  padding-left: 24px;
   font-size: 16px;
   line-height: 22px;
-  margin-top: -70px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 
   @media (min-width: @desktop-width) {
     grid-row-start: 2;
   }
 }
 
+.companion__paragraf br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.companion__paragraf::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 71px;
+  background: url("../img/rogovaya-back-desktop.png") no-repeat;
+  left: -25px;
+  bottom: -37px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 285px;
+    background: url("../img/rogovaya-back-tablet.png") no-repeat;
+    left: auto;
+    bottom: auto;
+    top: -160px;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: auto;
+    right: 278px;
+    bottom: -134px;
+  }
+}
+
 .companion__paragraf p {
   margin: 0;
+
+  // @media (min-width: @desktop-width) {
+  //   margin-left: 69px;
+  // }
 }
 
 .companion__paragraf p:first-child {
   font-weight: 300;
   color: white;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
+  width: 215px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 39px;
@@ -80,11 +154,16 @@
     font-size: 21px;
     line-height: 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 41px;
+  }
 }
 
 .companion__list {
   margin: 0;
   padding: 0;
+  margin-bottom: 19px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -92,12 +171,15 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    margin-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
+    padding-top: 19px;
+    margin-left: -5px;
   }
 }
 
@@ -106,10 +188,18 @@
   min-height: 428px;
   text-align: center;
   border-radius: 10px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    border-radius: 20px;
     width: 285px;
     height: 483px;
+  }
+}
+
+.companion__avatar {
+  @media (min-width: @tablet-width) {
+    width: 285px;
   }
 }
 
@@ -132,17 +222,17 @@
   width: 60px;
   height: 60px;
   bottom: 882px;
-  left: 42px;
+  left: 17px;
+  top: 16px;
   background: url("../img/icon/level/99.png") no-repeat;
 
   @media (min-width: @tablet-width) {
-    bottom: 563px;
-    left: 88px;
+    top: 20px;
+    left: 22px;
   }
 
   @media (min-width: @desktop-width) {
-    left: auto;
-    right: 686px;
+    left: 25px;
   }
 }
 
@@ -152,17 +242,17 @@
   width: 60px;
   height: 60px;
   bottom: 445px;
-  left: 42px;
+  left: 17px;
+  top: 16px;
   background: url("../img/icon/level/80.png") no-repeat;
 
   @media (min-width: @tablet-width) {
-    bottom: 563px;
-    left: 415px;
+    top: 20px;
+    left: 22px;
   }
 
   @media (min-width: @desktop-width) {
-    left: auto;
-    right: 358px;
+    left: 23px;
   }
 }
 
@@ -171,23 +261,30 @@
   font-size: 21px;
   line-height: 21px;
   color: #1d2e5b;
-  margin: 13px 0 15px 0;
+  margin: 9px 0 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    margin: 14px 0 25px 0;
     font-size: 24px;
     line-height: 22px;
+  }
+}
+
+.companion__item:last-child h3 {
+  @media (min-width: @tablet-width) {
+    margin-left: -21px;
   }
 }
 
 .companion__item:first-child h3::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
-  left: 77px;
+  width: 6px;
+  height: 6px;
+  left: 53px;
   border-radius: 50%;
   background: #f97676;
 
@@ -197,30 +294,33 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: auto;
-    bottom: 329px;
-    right: 721px;
+    width: 8px;
+    height: 8px;
+    left: 49px;
+    right: auto;
+    bottom: auto;
   }
 }
 
 .companion__item:last-child h3::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
-  left: 80px;
+  width: 6px;
+  height: 6px;
+  left: 64px;
   border-radius: 50%;
   background: #81e31e;
 
   @media (min-width: @tablet-width) {
     bottom: 325px;
-    left: 443px;
   }
 
   @media (min-width: @desktop-width) {
-    left: auto;
-    bottom: 329px;
-    right: 385px;
+    width: 8px;
+    height: 8px;
+    left: 49px;
+    bottom: auto;
+    right: auto;
   }
 }
 
@@ -233,6 +333,7 @@
   color: #444444;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 24px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -243,7 +344,7 @@
 }
 
 .companion__flag img {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .companion__flag img:last-child {
@@ -251,7 +352,9 @@
 }
 
 .companion__icon img {
-  margin-right: 10px;
+  margin-right: 6px;
+  width: 21px;
+  height: 21px;
 }
 
 .companion__icon img:last-child {
@@ -265,5 +368,8 @@
   @media (min-width: @desktop-width) {
     grid-row-start: 3;
     grid-column-start: 1;
+    width: 280px;
+    height: 80px;
+    margin-bottom: 40px;
   }
 }

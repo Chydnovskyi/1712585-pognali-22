@@ -1,7 +1,8 @@
 .search-country {
-  background: #e2e5f2;
-  display: flex;
+  display: none;
   flex-direction: column;
+  padding: 0 25px 25px 28px;
+  min-height: 746px;
 }
 
 .search-country__continents {
@@ -35,7 +36,13 @@
   }
 }
 
-.search-country a {
+.search-country__close {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 39px;
+  border-radius: 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -45,12 +52,44 @@
   text-align: center;
   color: #192144;
   background: #d6daed;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+  }
+}
+
+.search-country__close svg {
+  margin-top: -2px;
+  margin-right: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 22px;
+    height: 24px;
+    margin-right: 17px;
+  }
 }
 
 .country__list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  margin: 14px 0 28px 25px;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+    padding: 38px 60px 59px;
+    box-sizing: border-box;
+  }
+}
+
+.country__list ul {
+  margin: 0;
+  padding: 0;
 }
 
 .country__item {
@@ -58,6 +97,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin-left: 38px;
   }
 }
 

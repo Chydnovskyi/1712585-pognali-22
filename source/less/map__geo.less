@@ -25,6 +25,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 90px;
+    height: 90px;
     margin-top: 0;
     margin-right: 31px;
   }
@@ -33,7 +35,7 @@
 .map__geo a:nth-child(2) {
   width: 143px;
   text-transform: uppercase;
-  padding: 0 0 32px 16px;
+  padding: 0 0 30px 16px;
 
   @media (min-width: @tablet-width) {
     width: 430px;
@@ -51,12 +53,21 @@
   width: 100%;
   font-size: 18px;
   line-height: 18px;
-  padding: 22px;
+  padding: 20px;
   border: 3px solid #192144;
   border-radius: 10px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 25px 34px;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 252px;
+    width: 324px;
+    height: 80px;
     margin-left: auto;
     padding: 29px 35px 27px 37px;
   }

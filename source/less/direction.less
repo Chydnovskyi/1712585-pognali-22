@@ -3,23 +3,25 @@
   border-radius: 0 0 28px 28px;
   position: relative;
   z-index: 6;
-  margin-top: -28px;
+  margin-top: -30px;
   padding: 101px 25px 34px 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 149px 75px 75px 75px;
+    padding: 130px 75px 79px 50px;
+    border-radius: 0 0 55px 55px;
     background: #edeff6 url("../img/direction-background.png") no-repeat;
-    background-position-x: 416px;
-    background-position-y: 157px;
+    background-position-x: 441px;
+    background-position-y: 136px;
+    margin-top: -55px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position-x: 1180px;
-    background-position-y: 190px;
+    background-position-x: 1093px;
+    background-position-y: 143px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
-    padding: 176px 60px 87px 60px;
+    padding: 176px 60px 110px 60px;
   }
 }
 
@@ -29,15 +31,18 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+  padding-left: 24px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 0;
     margin-bottom: 57px;
     font-size: 45px;
     line-height: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 74px 0 57px 161px;
+    margin: 45px 0 43px 117px;
   }
 }
 
@@ -47,16 +52,19 @@
   line-height: 22px;
   color: #444444;
   margin: 0;
+  padding-left: 24px;
+  padding-bottom: 61px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 104px;
+    margin-bottom: 43px;
     width: 378px;
     font-size: 28px;
     line-height: 33px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 161px;
+    margin-left: 118px;
+    margin-bottom: 31px;
     grid-column-start: 2;
   }
 }
@@ -64,6 +72,14 @@
 .direction__show {
   display: flex;
   min-height: 62px;
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column: 2;
+    position: relative;
+    left: -17px;
+    top: -13px;
+  }
 }
 
 .direction__list {
@@ -71,15 +87,20 @@
   margin: 0;
   padding: 0;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 27px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 4;
-    margin: 73px 0 62px 70px;
+    margin: 39px 0 0 72px;
   }
 }
 
 .direction__background {
+  display: none;
   background: #e2e5f2;
   width: 141px;
   height: 141px;
@@ -91,8 +112,16 @@
   right: 37px;
 
   @media (min-width: @desktop-width) {
+    display: block;
     top: 75px;
     right: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    position: absolute;
+    top: 145px;
+    left: 60px;
   }
 }
 
@@ -108,25 +137,59 @@
     width: 616px;
     display: flex;
     flex-direction: row-reverse;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 560px;
   }
 }
 
 .direction__item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
 }
 
+.direction__item:last-child .direction__wrapper {
+  margin-top: -43px;
+  margin-bottom: 0;
+  padding: 26px 33px 3px 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 31px 33px 20px 27px;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
+  }
+}
 
 .direction__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding: 0 24px 24px 24px;
+  grid-template-rows: min-content min-content;
+  padding: 26px 24px 21px 24px;
+  margin-top: -45px;
+  z-index: 2;
+  position: relative;
+  background: white;
+  border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     padding: 30px 0 20px 26px;
+    margin-top: 0;
     margin-right: auto;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 0 20px 28px;
   }
 }
 
@@ -135,8 +198,10 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+  padding-bottom: 2px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 0;
     margin-bottom: 5px;
     font-size: 24px;
     line-height: 24px;
@@ -159,27 +224,63 @@
   }
 }
 
-.direction__item img:nth-child(2) {
+.direction__wrapper p:nth-child(2) {
+  width: 170px;
+}
+
+.direction__item:last-child .direction__wrapper p:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    width: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 213px;
+  }
+}
+
+.dirction__country {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.icon__flag {
   width: 35px;
   height: 24px;
   position: relative;
-  top: -17px;
+  top: -28px;
   left: 25px;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
-    top: 17px;
-    left: 71px;
+    top: 16px;
+    left: auto;
     width: 70px;
     height: 47px;
+    right: 149px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 25px;
+    right: 153px;
   }
 }
 
 .direction__people {
+  padding-top: 4px;
   grid-column: 2;
   margin-left: auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    margin-left: 17px;
+    padding-top: 20px;
+    margin-left: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
   }
 }
 
@@ -189,18 +290,40 @@
   width: 14px;
   height: 14px;
   background: url("../img/icon/direction_people.svg") no-repeat;
-  position: relative;
-  left: -16px;
-  top: 15px;
+  position: absolute;
+  left: -18px;
+  top: 5px;
 
   @media (min-width: @tablet-width) {
     width: 24px;
     height: 24px;
-    left: -17px;
-    top: 25px;
+    background: url("../img/icon/icon_user.svg") no-repeat;
+    left: -33px;
+    top: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -31px;
+    top: 20px;
   }
 }
 
-// .direction__people p {
-//   padding: 0;
-// }
+.direction__item:last-child .direction__people {
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 24px;
+  }
+}
+
+.direction__item:last-child .direction__people::before {
+  @media (min-width: @tablet-width) {
+    left: -34px;
+    top: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -33px;
+    top: 21px;
+  }
+}

@@ -1,18 +1,175 @@
 .add-plans {
   background: #d4d9eb;
+  margin-top: -28px;
+  padding-bottom: 172px;
 }
 
+<<<<<<< Updated upstream
+=======
+.add-plans legend {
+  background: #d4d9eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+>>>>>>> Stashed changes
 .add-plans__list {
   list-style: none;
 }
 
+.add-plans__pointer {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 62px;
+  height: 5px;
+  top: -54px;
+  right: 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.add-plans__pointer-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #1d2e5b;
+  border-radius: 50%;
+  opacity: 0.3;
+  top: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.add-plans__pointer-item--active::before {
+  opacity: 1;
+}
+
 .add-plans__item {
   background: white;
+<<<<<<< Updated upstream
+=======
+  width: 100%;
+  margin: 0 25px 8px;
+  padding: 24px 25px 23px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 40px 56px;
+    margin: 0 75px 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 101px 160px 60px;
+    margin: 0 60px 44px;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__item:nth-child(2) {
   display: flex;
   flex-direction: column;
+<<<<<<< Updated upstream
+=======
+  padding: 23px 25px 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+    padding: 48px 38px 54px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 98px 159px 90px;
+    margin-bottom: 43px;
+  }
+}
+
+.add-plans__item:last-child {
+  margin-bottom: 43px;
+  padding: 24px 26px 7px 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 47px 38px 53px 43px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 158px 104px;
+    margin-bottom: 98px;
+  }
+}
+
+.add-plans__item:last-child legend {
+  padding-left: 11px;
+  margin-bottom: 13px;
+}
+
+.add-plans__item:last-child .add-plans__fieldset:nth-child(3) {
+  margin-top: -3px;
+}
+
+.add-plans__item .add-plans__wrapper:first-child {
+  border: 1px solid;
+}
+
+.add-plans__wrapper {
+  position: relative;
+}
+
+.add-plans__wrapper::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url("../img/Arrow.svg") no-repeat;
+  top: 49px;
+  left: 165px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.add-plans__wrapper--last::before {
+  display: none;
+}
+
+.add-plans__wrapper--last::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: ~"linear-gradient(0, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)";
+    z-index: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__item h3 {
@@ -20,6 +177,20 @@
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+<<<<<<< Updated upstream
+=======
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__item p {
@@ -27,6 +198,39 @@
   font-size: 16px;
   line-height: 22px;
   color: #444444;
+<<<<<<< Updated upstream
+=======
+  margin: 0;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 0;
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 580px;
+    grid-row: 2;
+  }
+}
+
+.add-plans__item p::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 532px;
+    height: 1px;
+    background: #e1e3e9;
+    bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1000px;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__item label {
@@ -41,12 +245,259 @@
   color: rgba(29, 46, 91, 0.3);
 }
 
+<<<<<<< Updated upstream
 .add-plans__item .chieldren {
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
   color: #1d2e5b;
   text-transform: none;
+=======
+.add-plans__span {
+  padding: 9px;
+  border: 1px solid #cbced9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: -1px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-left: 25px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+  }
+}
+
+.add-plans__span img {
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
+}
+
+.add-plans__wrapper label {
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.add-plans__item select {
+  font-family: "BloggerSans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  padding: 11px 7px 11px 6px;
+  width: 168px;
+  background: white;
+  border: 1px solid #cbced9;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+    min-height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
+}
+
+.add-plans__item select:last-child {
+  width: 220px;
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
+}
+
+// .add-plans__steptwo {
+//   margin-bottom: 22px;
+// }
+
+.plans-country::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: url("../img/Ellipse-blue.svg") no-repeat;
+  top: 16px;
+  left: 163px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    left: auto;
+    top: 29px;
+    right: 138px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 220px;
+  }
+}
+
+.plans-country::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 40px;
+  background: ~"linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,1) 50%)";
+  top: 2px;
+  right: 74px;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 142px;
+    top: -43px;
+    width: 1px;
+    height: 157px;
+    background: #e1e3e9;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 223px;
+  }
+}
+
+.add-country::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffffff url("../img/Ellipse.svg") no-repeat;
+  top: 16px;
+  left: 163px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 29px;
+    right: 139px;
+    left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 220px;
+  }
+}
+
+.add-country::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 142px;
+    top: -2px;
+    width: 1px;
+    height: 121px;
+    background: #e1e3e9;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 223px;
+    height: 175px;
+  }
+}
+
+.add-plans__wrapper--first {
+  margin-top: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 42px;
+  }
+}
+
+.add-plans__wrapper--first label {
+  margin-bottom: -3px;
+}
+
+.add-plans__wrapper--last .add-country::before {
+  @media (min-width: @tablet-width) {
+    background: #e1e3e9 url("../img/Ellipse.svg") no-repeat;
+    border-radius: 50%;
+  }
+}
+
+.add-plans__steptwo input {
+  margin-bottom: 25px;
+  background: #edeff6;
+  width: 220px;
+  padding: 11px 7px 11px 11px;
+  text-align: left;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+    min-height: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
+}
+
+.add-plans__button {
+  background: none;
+  border: none;
+  width: 21px;
+  height: 21px;
+  position: relative;
+}
+
+.add-plans__button::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  bottom: 53px;
+  left: 209px;
+  background: url("../img/steptwo_btn.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    bottom: 73px;
+    left: 519px;
+    background: url("../img/icon/icon_close_point.svg") no-repeat;
+  }
+}
+
+.add-plans__plus {
+  background: none;
+  border: none;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    right: 196px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 306px;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__item a {
@@ -66,6 +517,45 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
+<<<<<<< Updated upstream
+=======
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 18px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 887px;
+  }
+}
+
+.add-plans__fieldset--line legend::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, #ffffff 50%);
+  top: 2px;
+  right: 36px;
+}
+
+.add-plans__fieldset img {
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__fieldset textarea {
@@ -80,10 +570,48 @@
   color: #444444;
 }
 
+<<<<<<< Updated upstream
 .add-plans__button {
   background: #ffd74b;
 }
 
+=======
+.add-plans__fieldset--line {
+  margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.add-plans__fieldset--line::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 287px;
+  top: 198px;
+  left: 10px;
+  background: url("../img/icon/line.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 265px;
+    height: 274px;
+    left: auto;
+    right: 28px;
+    background: url("../img/icon/line_country.svg") no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 100px;
+    top: -57px;
+  }
+}
+>>>>>>> Stashed changes
+
+.add-plans__fieldset--line legend {
+  padding-left: 11px;
+  margin-bottom: 13px;
+}
 
 .add-plans__item input {
   font-weight: 500;
@@ -95,12 +623,31 @@
 
 .popyt {
   display: grid;
+  margin-top: 19px;
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+<<<<<<< Updated upstream
+=======
+.popyt div {
+  margin-bottom: 18px;
+}
+
+.popyt div:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+}
+
+.popyt div:last-child {
+  margin-bottom: 0;
+}
+
+>>>>>>> Stashed changes
 .popyt__search {
   display: flex;
   flex-direction: column;
@@ -111,6 +658,49 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+<<<<<<< Updated upstream
+=======
+    align-items: center;
+  }
+}
+
+.popyt__search label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 57px;
+  }
+}
+
+.popyt__search span {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 440px;
+  }
+}
+
+.popyt input {
+  min-height: 43px;
+  text-align: center;
+  border: 1px solid #cbced9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+>>>>>>> Stashed changes
   }
 }
 
@@ -124,23 +714,160 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+<<<<<<< Updated upstream
+=======
+    align-items: center;
+  }
+}
+
+.popyt__days label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 79px;
+  }
+}
+
+.popyt__days span {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 440px;
+>>>>>>> Stashed changes
   }
 }
 
 .popyt__chieldren {
+<<<<<<< Updated upstream
+=======
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+
+>>>>>>> Stashed changes
   @media (min-width: @tablet-width) {
     order: 2;
   }
 }
 
+<<<<<<< Updated upstream
+=======
+.add-plans__item .chieldren {
+  display: flex;
+  align-items: center;
+  padding-left: 39px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  color: #1d2e5b;
+  text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e3e9;
+    width: 100%;
+    padding: 34px 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    justify-content: flex-end;
+  }
+}
+
+.chieldren::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0;
+  top: -8px;
+  background: url("../img/Checkbox_off-form.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: 233px;
+  }
+}
+
+.children__checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0;
+  top: -8px;
+  background: url("../img/Checkbox-on-form.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: 233px;
+  }
+}
+
+.popyt__button {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+  }
+}
+
+>>>>>>> Stashed changes
 // calendar
 
 .month {
   display: flex;
   align-items: center;
+<<<<<<< Updated upstream
 }
 
 .add-plans__weekdays {
+=======
+  padding: 11px 0;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+  margin: 27px 0 21px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 58px 0 39px 0;
+  }
+}
+
+.month h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.month a {
+  display: flex;
+}
+
+.month__arrow svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.add-plans__weekdays {
+  padding: 0;
+  margin-bottom: 7px;
+>>>>>>> Stashed changes
   list-style: none;
   font-weight: 400;
   font-size: 14px;
@@ -172,13 +899,33 @@
   border: 1px solid #cbced9;
   border-width: 1px 0 0 1px;
   padding: 0;
+<<<<<<< Updated upstream
+=======
+  margin-bottom: 24px;
+  min-height: 118px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 414px;
+  }
+>>>>>>> Stashed changes
 }
 
 .add-plans__days li {
   border: 1px solid #cbced9;
   box-sizing: border-box;
+<<<<<<< Updated upstream
   width: 14%;
   text-align: center;
+=======
+  width: calc(100% / 7);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> Stashed changes
   border-width: 0 1px 1px 0;
 
   @media (min-width: @desktop-width) {
@@ -211,6 +958,7 @@
 .add-plans--step {
   display: flex;
   flex-direction: column;
+  margin-top: 4px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
